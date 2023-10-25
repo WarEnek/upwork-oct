@@ -1,0 +1,40 @@
+.modal {
+  width: 100%;
+  padding: 24px 40px;
+}
+
+.modal:focus-visible {
+  outline: none;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #141736;
+  margin: 0;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.modalTitle:after {
+  content: '';
+  background: #DBE0E6;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.modalBottom {
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid #DBE0E6;
+}
+.popupOverflow {
+    overflow-y: auto;
+    max-height: 60vh;
+}

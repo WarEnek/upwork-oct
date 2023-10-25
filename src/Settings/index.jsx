@@ -1,5 +1,3 @@
-import './index.css';
-
 import Header from '../Header';
 import Aside from '../Aside';
 function Example() {

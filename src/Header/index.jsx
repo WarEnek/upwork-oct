@@ -2,8 +2,10 @@ import './index.css';
 
 import logo from '../assets/logo.svg';
 import userAva from '../assets/Emily_Tan_IenxnIz.png';
+import userAvaPedro from '../assets/SantosPedroSantos.png';
 
 function Header() {
+
   return (
     <header className="jss79">
       <div className="jss80">
@@ -42,7 +44,11 @@ function Header() {
             data-test-id="ET-undefined"
             style={{width: 40, height: 40, borderRadius: 40}}
           >
-            <img alt="Emily Tan" src={userAva} className="MuiAvatar-img" />
+            {window.location.pathname === '/submission' || window.location.pathname === '/submissionsubmitted' ? (
+              <img alt="Pedro" src={userAvaPedro} className="MuiAvatar-img" />
+            ) : (
+              <img alt="Emily Tan" src={userAva} className="MuiAvatar-img" />
+            )}
           </div>
           <div className="MuiBox-root jss110">Emily Tan</div>
           <div className="MuiBox-root jss111">
