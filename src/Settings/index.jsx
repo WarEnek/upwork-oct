@@ -125,7 +125,7 @@ function Example() {
                       </div>
                       <a
                         className="MuiPaper-root jss293 jss294 MuiPaper-outlined MuiPaper-rounded"
-                        href="/edit"
+                        href="/step1"
                       >
                         <div
                           className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"

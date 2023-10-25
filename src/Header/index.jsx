@@ -44,7 +44,7 @@ function Header() {
             data-test-id="ET-undefined"
             style={{width: 40, height: 40, borderRadius: 40}}
           >
-            {window.location.pathname === '/submission' || window.location.pathname === '/submissionsubmitted' ? (
+            {window.location.pathname === '/submission' || window.location.pathname === '/submission-submitted' ? (
               <img alt="Pedro" src={userAvaPedro} className="MuiAvatar-img" />
             ) : (
               <img alt="Emily Tan" src={userAva} className="MuiAvatar-img" />
