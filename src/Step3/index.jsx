@@ -1,4 +1,22 @@
+import {useState} from 'react';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import Popup from '../Popup';
+import Checkbox from '../Checkbox';
+import Input from '../Input';
+
 function Step3() {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (value) => {
+    setOpen(false);
+  };
   return (
     <div
       className="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialog-paperFullScreen jss737 MuiPaper-elevation24 MuiPaper-rounded"
@@ -225,6 +243,7 @@ function Step3() {
             <div
               data-rbd-droppable-id="newRules"
               data-rbd-droppable-context-id={0}
+              onClick={handleClickOpen}
             >
               <div
                 className="MuiPaper-root jss241 jss247 MuiPaper-outlined MuiPaper-rounded"
@@ -325,6 +344,379 @@ function Step3() {
                 </div>
               </div>
             </div>
+            <Popup
+              open={open}
+              onClose={handleClose}
+              title={'Edit rate condition'}
+              maxWidth={800}
+            >
+              <div className="MuiBox-root jss3270">
+                <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
+                  <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start">
+                    <div className="MuiBox-root jss3277">
+                      <div
+                        className="MuiBox-root jss3278"
+                        style={{
+                          textTransform: 'uppercase',
+                          height: 40,
+                          alignItems: 'center',
+                        }}
+                      >
+                        <div className="MuiBox-root jss279 jss3276">
+                          Rate name
+                        </div>
+                      </div>
+                    </div>
+                    <div className="MuiBox-root jss3281 jss3274">
+                      <div
+                        className="MuiBox-root jss3282"
+                        data-test-id="section-value-undefined"
+                      >
+                        <div className="MuiBox-root jss3283">
+                          <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                            <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl">
+                              <input
+                                aria-invalid="false"
+                                autoComplete="off"
+                                id="name"
+                                name="name"
+                                placeholder="Rate name"
+                                type="text"
+                                role="presentation"
+                                className="MuiInputBase-input MuiOutlinedInput-input"
+                                defaultValue="Depart>8AM or Arrive<6PM"
+                              />
+                              <fieldset
+                                aria-hidden="true"
+                                className="jss3284 MuiOutlinedInput-notchedOutline"
+                                style={{paddingLeft: 8}}
+                              >
+                                <legend
+                                  className="jss3285"
+                                  style={{width: '0.01px'}}
+                                >
+                                  <span>​</span>
+                                </legend>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="MuiBox-root jss288" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="MuiBox-root jss3270">
+                <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
+                  <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start">
+                    <div className="MuiBox-root jss3277">
+                      <div
+                        className="MuiBox-root jss3278"
+                        style={{
+                          textTransform: 'uppercase',
+                          height: 40,
+                          alignItems: 'center',
+                        }}
+                      >
+                        <div className="MuiBox-root jss279 jss3276">
+                          APPLIED RATE
+                        </div>
+                      </div>
+                    </div>
+                    <div className="MuiBox-root jss3281 jss3274">
+                      <div
+                        className="MuiBox-root jss33282"
+                        data-test-id="section-value-undefined"
+                      >
+                        <div className="MuiBox-root jss33283">
+                          <div className="MuiFormControl-root MuiTextField-root">
+                            <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+                              <input
+                                aria-invalid="false"
+                                autoComplete="off"
+                                id="name"
+                                name="name"
+                                placeholder="APPLIED RATE"
+                                type="text"
+                                role="presentation"
+                                className="MuiInputBase-input MuiOutlinedInput-input"
+                                defaultValue="50"
+                              />
+                              <fieldset
+                                aria-hidden="true"
+                                className="jss3284 MuiOutlinedInput-notchedOutline"
+                                style={{paddingLeft: 8}}
+                              >
+                                <legend
+                                  className="jss3285"
+                                  style={{width: '0.01px'}}
+                                >
+                                  <span>​</span>
+                                </legend>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="MuiBox-root jss3165">
+                          % of the daily rate
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="MuiBox-root jss147">
+                <div className="MuiBox-root jss3148">Conditions</div>
+              </div>
+              <div className="MuiGrid-root MuiGrid-container">
+                <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
+                  <Checkbox>
+                    <div className="checkBoxWrap">
+                      Trip duration is longer than
+                      <div
+                        className="MuiBox-root jss33282"
+                        data-test-id="section-value-undefined"
+                      >
+                        <div className="MuiBox-root jss33283">
+                          <div className="MuiFormControl-root MuiTextField-root">
+                            <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl">
+                              <input
+                                aria-invalid="false"
+                                autoComplete="off"
+                                id="name"
+                                name="name"
+                                placeholder="Days"
+                                type="text"
+                                role="presentation"
+                                className="MuiInputBase-input MuiOutlinedInput-input"
+                                defaultValue=""
+                              />
+                              <fieldset
+                                aria-hidden="true"
+                                className="jss3284 MuiOutlinedInput-notchedOutline"
+                                style={{paddingLeft: 8}}
+                              >
+                                <legend
+                                  className="jss3285"
+                                  style={{width: '0.01px'}}
+                                >
+                                  <span>​</span>
+                                </legend>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="MuiBox-root jss3165">days</div>
+                      </div>
+                    </div>
+                  </Checkbox>
+                </div>
+                <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
+                  <Checkbox checked>
+                    <div className="checkBoxWrap">
+                      Only for first and last day
+                    </div>
+                  </Checkbox>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+                  style={{paddingLeft: 32, marginBottom: 10}}
+                >
+                  <Checkbox checked>
+                    <div className="checkBoxWrap">
+                      First day starts before
+                      <div
+                        className="MuiBox-root jss33282"
+                        data-test-id="section-value-undefined"
+                      >
+                        <div className="MuiBox-root jss33283 jss33254">
+                          <div className="MuiFormControl-root MuiTextField-root">
+                            <div className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd">
+                              <input
+                                aria-invalid="false"
+                                id="schedule[0].time_from"
+                                placeholder="HH:MM"
+                                type="text"
+                                className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+                                defaultValue="08:00"
+                              />
+                              <div className="MuiInputAdornment-root MuiInputAdornment-positionEnd">
+                                <button
+                                  className="MuiButtonBase-root MuiIconButton-root"
+                                  tabIndex={0}
+                                  type="button"
+                                >
+                                  <span className="MuiIconButton-label">
+                                    <svg
+                                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                      aria-hidden="true"
+                                    >
+                                      <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                                      <path fill="none" d="M0 0h24v24H0z" />
+                                      <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                                    </svg>
+                                  </span>
+                                  <span className="MuiTouchRipple-root" />
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Checkbox>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+                  style={{paddingLeft: 32}}
+                >
+                  <Checkbox checked>
+                    <div className="checkBoxWrap">
+                      Last day ends after
+                      <div
+                        className="MuiBox-root jss33282"
+                        data-test-id="section-value-undefined"
+                      >
+                        <div className="MuiBox-root jss33283 jss33254">
+                          <div className="MuiFormControl-root MuiTextField-root">
+                            <div className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd">
+                              <input
+                                aria-invalid="false"
+                                id="schedule[0].time_from"
+                                placeholder="HH:MM"
+                                type="text"
+                                className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+                                defaultValue="18:00"
+                              />
+                              <div className="MuiInputAdornment-root MuiInputAdornment-positionEnd">
+                                <button
+                                  className="MuiButtonBase-root MuiIconButton-root"
+                                  tabIndex={0}
+                                  type="button"
+                                >
+                                  <span className="MuiIconButton-label">
+                                    <svg
+                                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                      aria-hidden="true"
+                                    >
+                                      <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                                      <path fill="none" d="M0 0h24v24H0z" />
+                                      <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                                    </svg>
+                                  </span>
+                                  <span className="MuiTouchRipple-root" />
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Checkbox>
+                </div>
+              </div>
+              <div className="MuiBox-root jss147">
+                <div className="MuiBox-root jss3148 jss31483">
+                  Rounding rule
+                </div>
+              </div>
+              <div className="MuiGrid-root jss3109 MuiGrid-container MuiGrid-spacing-xs-1">
+                <div className="MuiGrid-root jss3112 MuiGrid-item MuiGrid-grid-xs-3">
+                  <div className="MuiBox-root jss3188">
+                    <span>round APPLIED RATE</span>
+                  </div>
+                </div>
+                <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9">
+                  <div className="MuiBox-root jss3189">
+                    <div className="MuiBox-root jss3190">
+                      <FormControl>
+                        <RadioGroup
+                          row
+                          aria-labelledby="demo-radio-buttons-group-label"
+                          defaultValue="Yes"
+                          name="radio-buttons-group"
+                        >
+                          <FormControlLabel
+                            value="Yes"
+                            label="Yes"
+                            control={
+                              <Radio
+                                sx={{
+                                  color: '#6261B5',
+                                  '&.Mui-checked': {
+                                    color: '#6261B5',
+                                  },
+                                }}
+                              />
+                            }
+                            sx={{
+                              color: '#212831',
+                              '&.MuiFormControlLabel-root span': {
+                                fontSize: '15px',
+                              },
+                            }}
+                          />
+                          <FormControlLabel
+                            value="No"
+                            label="No"
+                            control={
+                              <Radio
+                                sx={{
+                                  color: '#6261B5',
+                                  '&.Mui-checked': {
+                                    color: '#6261B5',
+                                  },
+                                }}
+                              />
+                            }
+                            sx={{
+                              color: '#212831',
+                              '&.MuiFormControlLabel-root span': {
+                                fontSize: '15px',
+                              },
+                            }}
+                          />
+                        </RadioGroup>
+                      </FormControl>
+                    </div>
+                    <div className="MuiBox-root jss3346">
+                      <div className="MuiBox-root jss3348">
+                        <Input
+                          options={[
+                            {label: 'Round up', value: 'Round up'},
+                            {label: 'Round down', value: 'Round down'},
+                          ]}
+                          value="Round up"
+                        />
+                      </div>
+                    </div>
+                    <div className="MuiBox-root jss313">
+                      <div className="MuiBox-root jss315">
+                        <Input
+                          options={[
+                            {
+                              label: 'Nearest whole number',
+                              value: 'Nearest whole number',
+                            },
+                            {
+                              label: '2 decimal places',
+                              value: '2 decimal places',
+                            },
+                            {label: 'xxx', value: 'xxx'},
+                          ]}
+                          value="Nearest whole number"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Popup>
             <div
               data-rbd-droppable-id="newRules"
               data-rbd-droppable-context-id={0}

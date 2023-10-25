@@ -1,0 +1,24 @@
+.jssc141 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: inherit;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    z-index: 1;
+    position: absolute;
+}
+.checkboxSvgDefault {
+  fill: #6261B5;
+}
+.checkboxSvgDefault.checked path:first-of-type {
+  display: none;
+}
+.checkboxwrap input:checked + .checkboxSvgDefault.checked path:last-of-type{
+  display: none;
+}
+.checkboxwrap input:checked + .checkboxSvgDefault.checked path:first-of-type{
+  display: block;
+}
