@@ -414,6 +414,7 @@ function SubmissionApprove() {
                     <Popup
                       open={openPopup}
                       next={handlePopupStep2ClickOpen}
+                      ap
                       onClose={handlePopupClose}
                       title={'View per diem request'}
                       maxWidth={800}
@@ -767,8 +768,9 @@ function SubmissionApprove() {
                     </Popup>
                     <Popup
                       open={openPopupStep2}
-                      next={handleStep2Click}
                       prev={handlePopupClickOpen}
+                      submit={handleStep2Click}
+                      ap
                       onClose={handlePopupStep2ClickClose}
                       title={'View per diem request'}
                       maxWidth={800}

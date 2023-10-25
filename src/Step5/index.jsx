@@ -602,7 +602,7 @@ function Step5() {
                     className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
                     tabIndex={0}
                     type="button"
-                    href="/edit"
+                    href="/step4"
                   >
                     <span className="MuiButton-label">Prev</span>
                     <span className="MuiTouchRipple-root" />

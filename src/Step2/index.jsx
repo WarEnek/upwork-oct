@@ -638,22 +638,23 @@ function Step2() {
                     className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
                     tabIndex={0}
                     type="button"
-                    href="/edit"
+                    href="/step1"
                   >
                     <span className="MuiButton-label">Prev</span>
                     <span className="MuiTouchRipple-root" />
                   </a>
                 </div>
                 <div className="MuiGrid-root MuiGrid-item">
-                  <button
+                  <a
                     className="MuiButtonBase-root MuiButton-root jss182 MuiButton-contained MuiButton-containedPrimary"
                     tabIndex={0}
                     type="button"
                     data-test-id="next-btn"
+                    href="/step3"
                   >
                     <span className="MuiButton-label">Next</span>
                     <span className="MuiTouchRipple-root" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

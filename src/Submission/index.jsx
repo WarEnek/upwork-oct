@@ -28,7 +28,7 @@ function Submission() {
   };
 
   const handleToSubmit = () => {
-    navigate('/submissionsubmitted')
+    navigate('/submission-submitted')
   };
   const handlePopupClickOpen = () => {
     setOpenPopup(true);
@@ -206,6 +206,7 @@ function Submission() {
                               <Popup
                                 open={openPopup}
                                 next={handlePopupStep2ClickOpen}
+                                sub
                                 onClose={handlePopupClose}
                                 title={'New per diem'}
                                 maxWidth={800}
@@ -1089,8 +1090,9 @@ function Submission() {
                               </Popup>
                               <Popup
                                 open={openPopupStep2}
-                                next={handleToSubmit}
                                 prev={handlePopupClickOpen}
+                                submit={handleToSubmit}
+                                sub
                                 onClose={handlePopupStep2ClickClose}
                                 title={'New per diem'}
                                 maxWidth={800}

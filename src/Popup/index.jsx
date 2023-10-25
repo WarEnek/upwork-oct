@@ -1,5 +1,3 @@
-import DialogTitle from '@mui/material/DialogTitle';
-import Dialog from '@mui/material/Dialog';
 import Modal from '@mui/joy/Modal';
 import Sheet from '@mui/joy/Sheet';
 import ModalClose from '@mui/joy/ModalClose';
@@ -13,6 +11,9 @@ export default function Popup({
   next,
   title,
   maxWidth,
+  sub,
+  ap,
+  submit,
   children,
 }) {
   return (
@@ -38,46 +39,205 @@ export default function Popup({
           <h4 className="modalTitle">{title}</h4>
         </div>
         <div className="popupOverflow">{children}</div>
-        <div className="modalBottom">
-          <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-true">
-            <div className="MuiGrid-root MuiGrid-item">
-              <button
-                className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
-                tabIndex={0}
-                type="button"
-                onClick={onClose}
+        {sub ? (
+          <div className="modalBottom">
+            <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-true">
+              <div
+                className="MuiGrid-root MuiGrid-item"
+                style={{flex: '1 1 0%'}}
               >
-                <span className="MuiButton-label">Cancel</span>
-                <span className="MuiTouchRipple-root" />
-              </button>
-            </div>
-            {prev && (
+                <button
+                  className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
+                  tabIndex={0}
+                  type="button"
+                  onClick={onClose}
+                >
+                  <span className="MuiButton-label">Cancel</span>
+                  <span className="MuiTouchRipple-root" />
+                </button>
+              </div>
+
               <div className="MuiGrid-root MuiGrid-item">
                 <button
                   className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
                   tabIndex={0}
                   type="button"
-                  onClick={prev}
                 >
-                  <span className="MuiButton-label">Prev</span>
+                  <span className="MuiButton-label">Save as Draft</span>
                   <span className="MuiTouchRipple-root" />
                 </button>
               </div>
-            )}
-            <div className="MuiGrid-root MuiGrid-item">
-              <button
-                className="MuiButtonBase-root MuiButton-root jss182 MuiButton-contained MuiButton-containedPrimary"
-                tabIndex={0}
-                type="button"
-                data-test-id="next-btn"
-                onClick={next}
-              >
-                <span className="MuiButton-label">Update</span>
-                <span className="MuiTouchRipple-root" />
-              </button>
+              {prev && (
+                <div className="MuiGrid-root MuiGrid-item">
+                  <button
+                    className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
+                    tabIndex={0}
+                    type="button"
+                    onClick={prev}
+                  >
+                    <span className="MuiButton-label">Prev</span>
+                    <span className="MuiTouchRipple-root" />
+                  </button>
+                </div>
+              )}
+              {next && (
+                <div className="MuiGrid-root MuiGrid-item">
+                  <button
+                    className="MuiButtonBase-root MuiButton-root jss182 MuiButton-contained MuiButton-containedPrimary"
+                    tabIndex={0}
+                    type="button"
+                    data-test-id="next-btn"
+                    onClick={next}
+                  >
+                    <span className="MuiButton-label">Next</span>
+                    <span className="MuiTouchRipple-root" />
+                  </button>
+                </div>
+              )}
+              {submit && (
+                <div className="MuiGrid-root MuiGrid-item">
+                  <button
+                    className="MuiButtonBase-root MuiButton-root jss182 MuiButton-contained MuiButton-containedPrimary"
+                    tabIndex={0}
+                    type="button"
+                    data-test-id="next-btn"
+                    onClick={submit}
+                  >
+                    <span className="MuiButton-label">Update</span>
+                    <span className="MuiTouchRipple-root" />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
-        </div>
+        ) : ap ? (
+          <div className="modalBottom">
+            <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-true">
+              <div
+                className="MuiGrid-root MuiGrid-item"
+                style={{flex: '1 1 0%'}}
+              >
+                <button
+                  className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
+                  tabIndex={0}
+                  type="button"
+                  onClick={onClose}
+                >
+                  <span className="MuiButton-label">Cancel</span>
+                  <span className="MuiTouchRipple-root" />
+                </button>
+              </div>
+
+              {/* <div className="MuiGrid-root MuiGrid-item">
+                <button
+                  className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span className="MuiButton-label">Save as Draft</span>
+                  <span className="MuiTouchRipple-root" />
+                </button>
+              </div> */}
+              {prev && (
+                <>
+                <div className="MuiGrid-root MuiGrid-item">
+                  <button
+                    className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
+                    tabIndex={0}
+                    type="button"
+                    onClick={prev}
+                  >
+                    <span className="MuiButton-label">Prev</span>
+                    <span className="MuiTouchRipple-root" />
+                  </button>
+                </div>
+                <div className="MuiGrid-root MuiGrid-item">
+                  <button
+                    className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedError"
+                    tabIndex={0}
+                    type="button"
+                    onClick={onClose}
+                  >
+                    <span className="MuiButton-label">Reject</span>
+                    <span className="MuiTouchRipple-root" />
+                  </button>
+                </div>
+                </>
+              )}
+              {next && (
+                <div className="MuiGrid-root MuiGrid-item">
+                  <button
+                    className="MuiButtonBase-root MuiButton-root jss182 MuiButton-contained MuiButton-containedPrimary"
+                    tabIndex={0}
+                    type="button"
+                    data-test-id="next-btn"
+                    onClick={next}
+                  >
+                    <span className="MuiButton-label">Next</span>
+                    <span className="MuiTouchRipple-root" />
+                  </button>
+                </div>
+              )}
+              {submit && (
+                <div className="MuiGrid-root MuiGrid-item">
+                  <button
+                    className="MuiButtonBase-root MuiButton-root jss182 MuiButton-contained MuiButton-containedPrimary"
+                    tabIndex={0}
+                    type="button"
+                    data-test-id="next-btn"
+                    onClick={submit}
+                  >
+                    <span className="MuiButton-label">Approve</span>
+                    <span className="MuiTouchRipple-root" />
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="modalBottom">
+            <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-true">
+              <div className="MuiGrid-root MuiGrid-item">
+                <button
+                  className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
+                  tabIndex={0}
+                  type="button"
+                  onClick={onClose}
+                >
+                  <span className="MuiButton-label">Cancel</span>
+                  <span className="MuiTouchRipple-root" />
+                </button>
+              </div>
+              {prev && (
+                <div className="MuiGrid-root MuiGrid-item">
+                  <button
+                    className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
+                    tabIndex={0}
+                    type="button"
+                    onClick={prev}
+                  >
+                    <span className="MuiButton-label">Prev</span>
+                    <span className="MuiTouchRipple-root" />
+                  </button>
+                </div>
+              )}
+              {next && (
+                <div className="MuiGrid-root MuiGrid-item">
+                  <button
+                    className="MuiButtonBase-root MuiButton-root jss182 MuiButton-contained MuiButton-containedPrimary"
+                    tabIndex={0}
+                    type="button"
+                    data-test-id="next-btn"
+                    onClick={next}
+                  >
+                    <span className="MuiButton-label">Update</span>
+                    <span className="MuiTouchRipple-root" />
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </Sheet>
     </Modal>
   );

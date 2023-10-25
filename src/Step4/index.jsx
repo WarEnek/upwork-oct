@@ -407,7 +407,7 @@ function Step4() {
                     Rounding rule
                   </div>
                 </div>
-                <div className="MuiGrid-root jss3109 MuiGrid-container MuiGrid-spacing-xs-1">
+                <div className="MuiGrid-root jss3109 MuiGrid-container">
                   <div className="MuiGrid-root jss3112 MuiGrid-item MuiGrid-grid-xs-3">
                     <div className="MuiBox-root jss3188">
                       <span>round APPLIED RATE</span>
@@ -562,22 +562,23 @@ function Step4() {
                     className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary"
                     tabIndex={0}
                     type="button"
-                    href="/edit"
+                    href="/step3"
                   >
                     <span className="MuiButton-label">Prev</span>
                     <span className="MuiTouchRipple-root" />
                   </a>
                 </div>
                 <div className="MuiGrid-root MuiGrid-item">
-                  <button
+                  <a
                     className="MuiButtonBase-root MuiButton-root jss182 MuiButton-contained MuiButton-containedPrimary"
                     tabIndex={0}
                     type="button"
                     data-test-id="next-btn"
+                    href="/step5"
                   >
                     <span className="MuiButton-label">Next</span>
                     <span className="MuiTouchRipple-root" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

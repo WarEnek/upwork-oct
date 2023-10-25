@@ -1,6 +1,6 @@
 import './index.css';
 
-function Edit() {
+function Step1() {
   return (
     <div
       className="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialog-paperFullScreen jss737 MuiPaper-elevation24 MuiPaper-rounded"
@@ -215,7 +215,7 @@ function Edit() {
                           </div>
                           <div className="MuiBox-root jss512 jss506">
                             <div
-                              className="MuiBox-root jss513"
+                              className="MuiBox-root jsss1513"
                               data-test-id="section-value-undefined"
                             >
                               <div className="MuiBox-root jss514">
@@ -528,7 +528,7 @@ function Edit() {
                           </div>
                           <div className="MuiBox-root jss512 jss506">
                             <div
-                              className="MuiBox-root jss513"
+                              className="MuiBox-root jsss1513"
                               data-test-id="section-value-undefined"
                             >
                               <div className="MuiBox-root jss514">
@@ -1323,7 +1323,7 @@ function Edit() {
                     tabIndex={0}
                     type="button"
                     data-test-id="next-btn"
-                    href="/step3"
+                    href="/step2"
                   >
                     <span className="MuiButton-label">Next</span>
                     <span className="MuiTouchRipple-root" />
@@ -1338,4 +1338,4 @@ function Edit() {
   );
 }
 
-export default Edit;
+export default Step1;

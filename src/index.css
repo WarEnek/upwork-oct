@@ -3759,7 +3759,7 @@ activeScrollSpy > .jss495 {
 .jss506 {
   white-space: pre-line;
 }
-.jss513 {
+.jsss1513 {
   font-size: 14px;
   margin-top: 0px;
   line-height: 14.4px;
@@ -4424,20 +4424,7 @@ activeScrollSpy > .jss495 {
 .jss828 {
   position: relative;
 }
-.jss508 {
-  top: -5px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 0 8px;
-  overflow: hidden;
-  position: absolute;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: inherit;
-  pointer-events: none;
-}
+
 .jss513 {
   top: -5px;
   left: 0;
@@ -5237,8 +5224,9 @@ activeScrollSpy > .jss495 {
   height: 1px;
   background: #dbe0e6;
   position: absolute;
-  right: -330px;
+  right: -303px;
   top: 20px;
+
 }
 
 .stagesCircle {
@@ -5254,12 +5242,12 @@ activeScrollSpy > .jss495 {
   background: #f8f9fa;
   color: #61758f;
   text-align: center;
-  font-family: Lato;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .active .stagesCircle {
@@ -5489,6 +5477,10 @@ activeScrollSpy > .jss495 {
 .jssss401.MuiButton-outlined:hover,
 .jss401.MuiButton-outlined:active {
   color: #6261b5;
+}
+.MuiButton-outlinedError {
+  color: rgb(211, 47, 47);
+  border:1px solid rgba(211, 47, 47, 0.5);
 }
 .jssss401.MuiButton-outlined.MuiButton-outlinedSecondary:hover {
   color: #ff9599;
