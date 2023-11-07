@@ -1,6 +1,6 @@
 .modal {
   width: 100%;
-  padding: 24px 40px;
+  padding: 24px 32px;
 }
 
 .modal:focus-visible {
@@ -35,6 +35,8 @@
   border-top: 1px solid #DBE0E6;
 }
 .popupOverflow {
-    overflow-y: auto;
-    max-height: 60vh;
+  overflow-y: auto;
+  max-height: 60vh;
+  width: calc(100% + 32px);
+  padding-right: 32px;
 }

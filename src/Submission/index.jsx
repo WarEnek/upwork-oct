@@ -5,10 +5,6 @@ import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
 
 import Checkbox from '../Checkbox';
 import Popup from '../Popup';
@@ -20,6 +16,7 @@ import {useNavigate} from 'react-router-dom';
 function Submission() {
   const [openPopup, setOpenPopup] = useState(false);
   const [openPopupStep2, setOpenPopupStep2] = useState(false);
+  const [dinner, setDinner] = useState(false);
   const navigate = useNavigate();
 
   const handlePopupStep2ClickOpen = () => {
@@ -28,7 +25,7 @@ function Submission() {
   };
 
   const handleToSubmit = () => {
-    navigate('/submission-submitted')
+    navigate('/submission-submitted');
   };
   const handlePopupClickOpen = () => {
     setOpenPopup(true);
@@ -74,6 +71,10 @@ function Submission() {
 
     prevOpen.current = open;
   }, [anchorRef, open]);
+
+  const dinnerHandle = () => {
+    setDinner(!dinner);
+  }
 
   return (
     <div className="jss70">
@@ -179,7 +180,13 @@ function Submission() {
                                           : 'left bottom',
                                     }}
                                   >
-                                    <Paper>
+                                    <Paper
+                                      sx={{
+                                        boxShadow:
+                                          '1px 2px 2px rgba(217, 221, 228, 0.4)',
+                                        fontFamily: 'Lato, sans-serif',
+                                      }}
+                                    >
                                       <ClickAwayListener
                                         onClickAway={handleClose}
                                       >
@@ -188,12 +195,36 @@ function Submission() {
                                           id="composition-menu"
                                           aria-labelledby="composition-button"
                                           onKeyDown={handleListKeyDown}
+                                          sx={{
+                                            border: '1px solid #D9DDE4',
+                                            borderRadius: '5px',
+                                          }}
                                         >
-                                          <MenuItem onClick={handleClose}>
-                                            Expense claim
+                                          <MenuItem
+                                            onClick={handleClose}
+                                            sx={{
+                                              fontFamily: 'Lato, sans-serif',
+                                              fontSize: '15px',
+                                              color: 'rgb(33, 40, 49)',
+                                              transition: '.2s all',
+                                              '&:hover': {
+                                                backgroundColor: '#F7F7FB'
+                                              },
+                                            }}
+                                          >
+                                            Expense Claim
                                           </MenuItem>
                                           <MenuItem
                                             onClick={handlePopupClickOpen}
+                                            sx={{
+                                              fontFamily: 'Lato, sans-serif',
+                                              fontSize: '15px',
+                                              color: 'rgb(33, 40, 49)', 
+                                              transition: '.2s all',
+                                              '&:hover': {
+                                                backgroundColor: '#F7F7FB'
+                                              },
+                                            }}
                                           >
                                             Per diem
                                           </MenuItem>
@@ -215,7 +246,7 @@ function Submission() {
                                   <div className="active">
                                     <div className="stagesCircle">1</div>
                                     <span className="stagesText">
-                                      Additional details
+                                      Trip details
                                     </span>
                                   </div>
                                   <div>
@@ -229,10 +260,6 @@ function Submission() {
                                   <div className="MuiBox-root jss3148">
                                     Trip details
                                   </div>
-                                  <div className="MuiBox-root jsss3148">
-                                    Leg 1
-                                  </div>
-                                  <hr className="MuiDivider-root" />
                                   <div className="MuiBox-root jss3270">
                                     <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
                                       <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start">
@@ -283,7 +310,7 @@ function Submission() {
                                                       value: 'value3',
                                                     },
                                                   ]}
-                                                  value="Albania"
+                                                  placeholder="Country"
                                                 />
                                               </div>
                                             </div>
@@ -373,7 +400,7 @@ function Submission() {
                                                           placeholder="HH:MM"
                                                           type="text"
                                                           className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
-                                                          defaultValue="08:00"
+                                                          defaultValue=""
                                                         />
                                                         <div className="MuiInputAdornment-root MuiInputAdornment-positionEnd">
                                                           <button
@@ -424,7 +451,7 @@ function Submission() {
                                             }}
                                           >
                                             <div className="MuiBox-root jss279 jss3276">
-                                              Arrival
+                                            Arrival at destination
                                               <span className="jsss509">
                                                 &nbsp;*
                                               </span>
@@ -461,7 +488,7 @@ function Submission() {
                                                       value: 'value3',
                                                     },
                                                   ]}
-                                                  value="Albania"
+                                                  placeholder="Country"
                                                 />
                                               </div>
                                             </div>
@@ -551,7 +578,7 @@ function Submission() {
                                                           placeholder="HH:MM"
                                                           type="text"
                                                           className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
-                                                          defaultValue="08:00"
+                                                          defaultValue=""
                                                         />
                                                         <div className="MuiInputAdornment-root MuiInputAdornment-positionEnd">
                                                           <button
@@ -588,371 +615,237 @@ function Submission() {
                                         </div>
                                       </div>
                                     </div>
+                                  </div>
+                                  <div className="MuiBox-root jss3270">
+                                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
+                                      <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start">
+                                        <div className="MuiBox-root jsss3277">
+                                          <div
+                                            className="MuiBox-root jss3278"
+                                            style={{
+                                              textTransform: 'uppercase',
+                                              height: 40,
+                                              alignItems: 'center',
+                                            }}
+                                          >
+                                            <div className="MuiBox-root jss279 jss3276">
+                                            Return at home country
+                                              <span className="jsss509">
+                                                &nbsp;*
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="MuiBox-root jsss3281 jss3274 MuiGrid-item MuiGrid-grid-xs-true">
+                                          <div
+                                            className="MuiBox-root jss3282"
+                                            data-test-id="section-value-undefined"
+                                          >
+                                            <div className="MuiBox-root jss3283">
+                                              <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                                                <Input
+                                                  options={[
+                                                    {
+                                                      label: 'Afghanistan',
+                                                      value: 'value1',
+                                                    },
+                                                    {
+                                                      label: 'Albania',
+                                                      value: 'value2',
+                                                    },
+                                                    {
+                                                      label: 'Algeria',
+                                                      value: 'value3',
+                                                    },
+                                                    {
+                                                      label: 'Angola',
+                                                      value: 'value3',
+                                                    },
+                                                    {
+                                                      label: 'Anguilla',
+                                                      value: 'value3',
+                                                    },
+                                                  ]}
+                                                  placeholder="Country"
+                                                />
+                                              </div>
+                                            </div>
+                                            <div className="MuiBox-root jss288" />
+                                          </div>
+                                        </div>
+                                        <div className="MuiBox-root jsss3281 jss3274 MuiGrid-item MuiGrid-grid-xs-true">
+                                          <div
+                                            className="MuiBox-root jss3282"
+                                            data-test-id="section-value-undefined"
+                                          >
+                                            <div className="MuiBox-root jss3283">
+                                              <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                                                <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiOutlinedInput-adornedStart">
+                                                  <div className="MuiInputAdornment-root MuiInputAdornment-positionStart">
+                                                    <button
+                                                      className="MuiButtonBase-root MuiIconButton-root jss376 jssss374"
+                                                      tabIndex={0}
+                                                      type="button"
+                                                      aria-label="change date"
+                                                    >
+                                                      <span className="MuiIconButton-label">
+                                                        <svg
+                                                          width={24}
+                                                          height={24}
+                                                          viewBox="0 0 24 24"
+                                                          fill="none"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          className="MuiSvgIcon-root"
+                                                          focusable="false"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <path
+                                                            d="M19 3H18V1H16V3H8V1H6V3H5C3.89 3 3.01 3.9 3.01 5L3 19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19ZM7 10H12V15H7V10Z"
+                                                            fill="#000"
+                                                          />
+                                                        </svg>
+                                                      </span>
+                                                    </button>
+                                                  </div>
+                                                  <input
+                                                    aria-invalid="false"
+                                                    autoComplete="off"
+                                                    id="receipt_date"
+                                                    name="receipt_date"
+                                                    placeholder="DD/MM/YYYY"
+                                                    type="text"
+                                                    role="presentation"
+                                                    className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart"
+                                                    defaultValue=""
+                                                  />
+                                                  <fieldset
+                                                    aria-hidden="true"
+                                                    className="jsss339 MuiOutlinedInput-notchedOutline"
+                                                    style={{paddingLeft: 8}}
+                                                  >
+                                                    <legend
+                                                      className="jsss340"
+                                                      style={{width: '0.01px'}}
+                                                    >
+                                                      <span>​</span>
+                                                    </legend>
+                                                  </fieldset>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div className="MuiBox-root jss288" />
+                                          </div>
+                                        </div>
+                                        <div className="MuiBox-root  jss3274 MuiGrid-item MuiGrid-grid-xs-true">
+                                          <div
+                                            className="MuiBox-root jss3282"
+                                            data-test-id="section-value-undefined"
+                                          >
+                                            <div className="MuiBox-root jss3283">
+                                              <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                                                <div
+                                                  className="MuiBox-root jss33282"
+                                                  data-test-id="section-value-undefined"
+                                                >
+                                                  <div className="MuiBox-root jss33283 jss33254">
+                                                    <div className="MuiFormControl-root MuiTextField-root">
+                                                      <div className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd">
+                                                        <input
+                                                          aria-invalid="false"
+                                                          id="schedule[0].time_from"
+                                                          placeholder="HH:MM"
+                                                          type="text"
+                                                          className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+                                                          defaultValue=""
+                                                        />
+                                                        <div className="MuiInputAdornment-root MuiInputAdornment-positionEnd">
+                                                          <button
+                                                            className="MuiButtonBase-root MuiIconButton-root"
+                                                            tabIndex={0}
+                                                            type="button"
+                                                          >
+                                                            <span className="MuiIconButton-label">
+                                                              <svg
+                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                                                                focusable="false"
+                                                                viewBox="0 0 24 24"
+                                                                aria-hidden="true"
+                                                              >
+                                                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                                                                <path
+                                                                  fill="none"
+                                                                  d="M0 0h24v24H0z"
+                                                                />
+                                                                <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                                                              </svg>
+                                                            </span>
+                                                            <span className="MuiTouchRipple-root" />
+                                                          </button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div className="MuiBox-root jss288" />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="MuiBox-root jssss961">
+                                  <div className="MuiBox-root jssss962">
+                                    <button
+                                      className="MuiButtonBase-root MuiButton-root jssss852 MuiButton-text MuiButton-textPrimary"
+                                      tabIndex={0}
+                                      type="button"
+                                      data-test-id="rule-add-button"
+                                    >
+                                      <span className="MuiButton-label">
+                                        <span className="MuiButton-startIcon MuiButton-iconSizeMedium">
+                                          <svg
+                                            width={20}
+                                            height={20}
+                                            viewBox="0 0 20 20"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                          >
+                                            <path
+                                              d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
+                                              stroke="#000"
+                                              strokeWidth="1.3"
+                                              strokeLinecap="round"
+                                              fill="none"
+                                              strokeLinejoin="round"
+                                            />
+                                            <path
+                                              d="M7.5 10H12.5"
+                                              stroke="#000"
+                                              strokeWidth="1.3"
+                                              strokeLinecap="round"
+                                              strokeLinejoin="round"
+                                            />
+                                            <path
+                                              d="M10 7.5V12.5"
+                                              stroke="#000"
+                                              strokeWidth="1.3"
+                                              strokeLinecap="round"
+                                              strokeLinejoin="round"
+                                            />
+                                          </svg>
+                                        </span>
+                                        Add rule
+                                      </span>
+                                    </button>
                                   </div>
                                 </div>
-                                <div className="MuiBox-root jss147">
-                                  <div className="MuiBox-root jsss3148">
-                                    Leg 2
-                                  </div>
-                                  <hr className="MuiDivider-root" />
-                                  <div className="MuiBox-root jss3270">
-                                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
-                                      <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start">
-                                        <div className="MuiBox-root jsss3277">
-                                          <div
-                                            className="MuiBox-root jss3278"
-                                            style={{
-                                              textTransform: 'uppercase',
-                                              height: 40,
-                                              alignItems: 'center',
-                                            }}
-                                          >
-                                            <div className="MuiBox-root jss279 jss3276">
-                                              Departure
-                                              <span className="jsss509">
-                                                &nbsp;*
-                                              </span>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="MuiBox-root jsss3281 jss3274 MuiGrid-item MuiGrid-grid-xs-true">
-                                          <div
-                                            className="MuiBox-root jss3282"
-                                            data-test-id="section-value-undefined"
-                                          >
-                                            <div className="MuiBox-root jss3283">
-                                              <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                                <Input
-                                                  options={[
-                                                    {
-                                                      label: 'Afghanistan',
-                                                      value: 'value1',
-                                                    },
-                                                    {
-                                                      label: 'Albania',
-                                                      value: 'value2',
-                                                    },
-                                                    {
-                                                      label: 'Algeria',
-                                                      value: 'value3',
-                                                    },
-                                                    {
-                                                      label: 'Angola',
-                                                      value: 'value3',
-                                                    },
-                                                    {
-                                                      label: 'Anguilla',
-                                                      value: 'value3',
-                                                    },
-                                                  ]}
-                                                  value="Albania"
-                                                />
-                                              </div>
-                                            </div>
-                                            <div className="MuiBox-root jss288" />
-                                          </div>
-                                        </div>
-                                        <div className="MuiBox-root jsss3281 jss3274 MuiGrid-item MuiGrid-grid-xs-true">
-                                          <div
-                                            className="MuiBox-root jss3282"
-                                            data-test-id="section-value-undefined"
-                                          >
-                                            <div className="MuiBox-root jss3283">
-                                              <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                                <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiOutlinedInput-adornedStart">
-                                                  <div className="MuiInputAdornment-root MuiInputAdornment-positionStart">
-                                                    <button
-                                                      className="MuiButtonBase-root MuiIconButton-root jss376 jssss374"
-                                                      tabIndex={0}
-                                                      type="button"
-                                                      aria-label="change date"
-                                                    >
-                                                      <span className="MuiIconButton-label">
-                                                        <svg
-                                                          width={24}
-                                                          height={24}
-                                                          viewBox="0 0 24 24"
-                                                          fill="none"
-                                                          xmlns="http://www.w3.org/2000/svg"
-                                                          className="MuiSvgIcon-root"
-                                                          focusable="false"
-                                                          aria-hidden="true"
-                                                        >
-                                                          <path
-                                                            d="M19 3H18V1H16V3H8V1H6V3H5C3.89 3 3.01 3.9 3.01 5L3 19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19ZM7 10H12V15H7V10Z"
-                                                            fill="#000"
-                                                          />
-                                                        </svg>
-                                                      </span>
-                                                    </button>
-                                                  </div>
-                                                  <input
-                                                    aria-invalid="false"
-                                                    autoComplete="off"
-                                                    id="receipt_date"
-                                                    name="receipt_date"
-                                                    placeholder="DD/MM/YYYY"
-                                                    type="text"
-                                                    role="presentation"
-                                                    className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart"
-                                                    defaultValue=""
-                                                  />
-                                                  <fieldset
-                                                    aria-hidden="true"
-                                                    className="jsss339 MuiOutlinedInput-notchedOutline"
-                                                    style={{paddingLeft: 8}}
-                                                  >
-                                                    <legend
-                                                      className="jsss340"
-                                                      style={{width: '0.01px'}}
-                                                    >
-                                                      <span>​</span>
-                                                    </legend>
-                                                  </fieldset>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div className="MuiBox-root jss288" />
-                                          </div>
-                                        </div>
-                                        <div className="MuiBox-root  jss3274 MuiGrid-item MuiGrid-grid-xs-true">
-                                          <div
-                                            className="MuiBox-root jss3282"
-                                            data-test-id="section-value-undefined"
-                                          >
-                                            <div className="MuiBox-root jss3283">
-                                              <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                                <div
-                                                  className="MuiBox-root jss33282"
-                                                  data-test-id="section-value-undefined"
-                                                >
-                                                  <div className="MuiBox-root jss33283 jss33254">
-                                                    <div className="MuiFormControl-root MuiTextField-root">
-                                                      <div className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd">
-                                                        <input
-                                                          aria-invalid="false"
-                                                          id="schedule[0].time_from"
-                                                          placeholder="HH:MM"
-                                                          type="text"
-                                                          className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
-                                                          defaultValue="08:00"
-                                                        />
-                                                        <div className="MuiInputAdornment-root MuiInputAdornment-positionEnd">
-                                                          <button
-                                                            className="MuiButtonBase-root MuiIconButton-root"
-                                                            tabIndex={0}
-                                                            type="button"
-                                                          >
-                                                            <span className="MuiIconButton-label">
-                                                              <svg
-                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-                                                                focusable="false"
-                                                                viewBox="0 0 24 24"
-                                                                aria-hidden="true"
-                                                              >
-                                                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
-                                                                <path
-                                                                  fill="none"
-                                                                  d="M0 0h24v24H0z"
-                                                                />
-                                                                <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
-                                                              </svg>
-                                                            </span>
-                                                            <span className="MuiTouchRipple-root" />
-                                                          </button>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div className="MuiBox-root jss288" />
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="MuiBox-root jss3270">
-                                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
-                                      <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start">
-                                        <div className="MuiBox-root jsss3277">
-                                          <div
-                                            className="MuiBox-root jss3278"
-                                            style={{
-                                              textTransform: 'uppercase',
-                                              height: 40,
-                                              alignItems: 'center',
-                                            }}
-                                          >
-                                            <div className="MuiBox-root jss279 jss3276">
-                                              Arrival
-                                              <span className="jsss509">
-                                                &nbsp;*
-                                              </span>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="MuiBox-root jsss3281 jss3274 MuiGrid-item MuiGrid-grid-xs-true">
-                                          <div
-                                            className="MuiBox-root jss3282"
-                                            data-test-id="section-value-undefined"
-                                          >
-                                            <div className="MuiBox-root jss3283">
-                                              <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                                <Input
-                                                  options={[
-                                                    {
-                                                      label: 'Afghanistan',
-                                                      value: 'value1',
-                                                    },
-                                                    {
-                                                      label: 'Albania',
-                                                      value: 'value2',
-                                                    },
-                                                    {
-                                                      label: 'Algeria',
-                                                      value: 'value3',
-                                                    },
-                                                    {
-                                                      label: 'Angola',
-                                                      value: 'value3',
-                                                    },
-                                                    {
-                                                      label: 'Anguilla',
-                                                      value: 'value3',
-                                                    },
-                                                  ]}
-                                                  value="Albania"
-                                                />
-                                              </div>
-                                            </div>
-                                            <div className="MuiBox-root jss288" />
-                                          </div>
-                                        </div>
-                                        <div className="MuiBox-root jsss3281 jss3274 MuiGrid-item MuiGrid-grid-xs-true">
-                                          <div
-                                            className="MuiBox-root jss3282"
-                                            data-test-id="section-value-undefined"
-                                          >
-                                            <div className="MuiBox-root jss3283">
-                                              <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                                <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiOutlinedInput-adornedStart">
-                                                  <div className="MuiInputAdornment-root MuiInputAdornment-positionStart">
-                                                    <button
-                                                      className="MuiButtonBase-root MuiIconButton-root jss376 jssss374"
-                                                      tabIndex={0}
-                                                      type="button"
-                                                      aria-label="change date"
-                                                    >
-                                                      <span className="MuiIconButton-label">
-                                                        <svg
-                                                          width={24}
-                                                          height={24}
-                                                          viewBox="0 0 24 24"
-                                                          fill="none"
-                                                          xmlns="http://www.w3.org/2000/svg"
-                                                          className="MuiSvgIcon-root"
-                                                          focusable="false"
-                                                          aria-hidden="true"
-                                                        >
-                                                          <path
-                                                            d="M19 3H18V1H16V3H8V1H6V3H5C3.89 3 3.01 3.9 3.01 5L3 19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19ZM7 10H12V15H7V10Z"
-                                                            fill="#000"
-                                                          />
-                                                        </svg>
-                                                      </span>
-                                                    </button>
-                                                  </div>
-                                                  <input
-                                                    aria-invalid="false"
-                                                    autoComplete="off"
-                                                    id="receipt_date"
-                                                    name="receipt_date"
-                                                    placeholder="DD/MM/YYYY"
-                                                    type="text"
-                                                    role="presentation"
-                                                    className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart"
-                                                    defaultValue=""
-                                                  />
-                                                  <fieldset
-                                                    aria-hidden="true"
-                                                    className="jsss339 MuiOutlinedInput-notchedOutline"
-                                                    style={{paddingLeft: 8}}
-                                                  >
-                                                    <legend
-                                                      className="jsss340"
-                                                      style={{width: '0.01px'}}
-                                                    >
-                                                      <span>​</span>
-                                                    </legend>
-                                                  </fieldset>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div className="MuiBox-root jss288" />
-                                          </div>
-                                        </div>
-                                        <div className="MuiBox-root  jss3274 MuiGrid-item MuiGrid-grid-xs-true">
-                                          <div
-                                            className="MuiBox-root jss3282"
-                                            data-test-id="section-value-undefined"
-                                          >
-                                            <div className="MuiBox-root jss3283">
-                                              <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                                <div
-                                                  className="MuiBox-root jss33282"
-                                                  data-test-id="section-value-undefined"
-                                                >
-                                                  <div className="MuiBox-root jss33283 jss33254">
-                                                    <div className="MuiFormControl-root MuiTextField-root">
-                                                      <div className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd">
-                                                        <input
-                                                          aria-invalid="false"
-                                                          id="schedule[0].time_from"
-                                                          placeholder="HH:MM"
-                                                          type="text"
-                                                          className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
-                                                          defaultValue="08:00"
-                                                        />
-                                                        <div className="MuiInputAdornment-root MuiInputAdornment-positionEnd">
-                                                          <button
-                                                            className="MuiButtonBase-root MuiIconButton-root"
-                                                            tabIndex={0}
-                                                            type="button"
-                                                          >
-                                                            <span className="MuiIconButton-label">
-                                                              <svg
-                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-                                                                focusable="false"
-                                                                viewBox="0 0 24 24"
-                                                                aria-hidden="true"
-                                                              >
-                                                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
-                                                                <path
-                                                                  fill="none"
-                                                                  d="M0 0h24v24H0z"
-                                                                />
-                                                                <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
-                                                              </svg>
-                                                            </span>
-                                                            <span className="MuiTouchRipple-root" />
-                                                          </button>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div className="MuiBox-root jss288" />
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
+
                                 </div>
-                                <div className="MuiBox-root jss147">
+                                <div className="MuiBox-root jssss147">
                                   <div className="MuiBox-root jss3148">
                                     Additional details
                                   </div>
@@ -1161,22 +1054,28 @@ function Submission() {
                                             <Checkbox checked={true}>
                                               <div>
                                                 <div className="perDay-item-date">
-                                                  Tue, 19/09/2023
+                                                Tue, 19/09/2023
                                                 </div>
                                                 <div className="perDay-item-depart">
                                                   <b>Malaysia,</b>{' '}
-                                                  {'Depart >8AM or Arrive <6PM'}
+                                                  {'Depart from home after 8am'}
                                                 </div>
                                               </div>
                                             </Checkbox>
                                           </div>
-                                          <div className="perDay-item-price">SGD 43.00</div>
+                                          <div className="perDay-item-price">
+                                            SGD 43.00
+                                          </div>
                                         </div>
                                         <div className="perDay-tags">
                                           <h4>Deductions</h4>
                                           <div className="perDay-tags-list">
-                                            <span className='perDay-tags-chip'>LUNCH PROVIDED</span>
-                                            <span className='perDay-tags-chip'>DINNER PROVIDED</span>
+                                            <span className="perDay-tags-chip">
+                                              LUNCH PROVIDED
+                                            </span>
+                                            <span className="perDay-tags-chip">
+                                              DINNER PROVIDED
+                                            </span>
                                           </div>
                                         </div>
                                       </div>
@@ -1190,22 +1089,28 @@ function Submission() {
                                             <Checkbox checked={true}>
                                               <div>
                                                 <div className="perDay-item-date">
-                                                  Tue, 19/09/2023
+                                                Wed, 20/09/2023
                                                 </div>
                                                 <div className="perDay-item-depart">
                                                   <b>Malaysia,</b>{' '}
-                                                  {'Depart >8AM or Arrive <6PM'}
+                                                  {'Full daily rate'}
                                                 </div>
                                               </div>
                                             </Checkbox>
                                           </div>
-                                          <div className="perDay-item-price">SGD 43.00</div>
+                                          <div className="perDay-item-price">
+                                            SGD {dinner ? "86.00" : "60.00"}
+                                          </div>
                                         </div>
                                         <div className="perDay-tags">
                                           <h4>Deductions</h4>
                                           <div className="perDay-tags-list">
-                                            <span className='perDay-tags-chip'>LUNCH PROVIDED</span>
-                                            <span className='perDay-tags-chip'>DINNER PROVIDED</span>
+                                            <span className="perDay-tags-chip">
+                                              LUNCH PROVIDED
+                                            </span>
+                                            <button className={dinner ? "perDay-tags-chip" : "perDay-tags-chip active"} onClick={dinnerHandle}>
+                                              DINNER PROVIDED
+                                            </button>
                                           </div>
                                         </div>
                                       </div>
@@ -1219,22 +1124,28 @@ function Submission() {
                                             <Checkbox checked={true}>
                                               <div>
                                                 <div className="perDay-item-date">
-                                                  Tue, 19/09/2023
+                                                Thu, 21/09/2023
                                                 </div>
                                                 <div className="perDay-item-depart">
-                                                  <b>Malaysia,</b>{' '}
-                                                  {'Depart >8AM or Arrive <6PM'}
+                                                  <b>Malaysia,</b>
+                                                  {'Full daily rate'}
                                                 </div>
                                               </div>
                                             </Checkbox>
                                           </div>
-                                          <div className="perDay-item-price">SGD 43.00</div>
+                                          <div className="perDay-item-price">
+                                            SGD 60.00
+                                          </div>
                                         </div>
                                         <div className="perDay-tags">
                                           <h4>Deductions</h4>
                                           <div className="perDay-tags-list">
-                                            <span className='perDay-tags-chip'>LUNCH PROVIDED</span>
-                                            <span className='perDay-tags-chip active'>DINNER PROVIDED</span>
+                                            <span className="perDay-tags-chip">
+                                              LUNCH PROVIDED
+                                            </span>
+                                            <span className="perDay-tags-chip active">
+                                              DINNER PROVIDED
+                                            </span>
                                           </div>
                                         </div>
                                       </div>

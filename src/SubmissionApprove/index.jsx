@@ -1,14 +1,4 @@
 import {useRef, useEffect, useState} from 'react';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
 import userAva from '../assets/Emily_Tan_IenxnIz.png';
 import Alert from '@mui/material/Alert';
 import IconButton from '@mui/material/IconButton';
@@ -19,7 +9,6 @@ import Checkbox from '../Checkbox';
 import Popup from '../Popup';
 import Header from '../Header';
 import Aside from '../Aside';
-import Input from '../Input';
 
 function SubmissionApprove() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -35,6 +24,9 @@ function SubmissionApprove() {
     setOpenPopupStep2(false);
     setOpenPopup(false);
     setOpenAlert(true);
+    setTimeout(() => {
+      setOpenAlert(false)
+    }, 4000)
   };
 
   const handlePopupClickOpen = () => {
@@ -51,27 +43,6 @@ function SubmissionApprove() {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
 
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
-
-  const handleClose = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
-    }
-
-    setOpen(false);
-  };
-
-  function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === 'Escape') {
-      setOpen(false);
-    }
-  }
-
   // return focus to the button when we transitioned from !open -> open
   const prevOpen = useRef(open);
   useEffect(() => {
@@ -85,7 +56,7 @@ function SubmissionApprove() {
   return (
     <div className="jss70">
       <Header />
-      <Collapse in={openAlert} className='colapseAlert'>
+      <Collapse in={openAlert} className="colapseAlert">
         <Alert
           severity="success"
           variant="filled"
@@ -101,7 +72,7 @@ function SubmissionApprove() {
               <CloseIcon fontSize="inherit" />
             </IconButton>
           }
-          sx={{mb: 2, backgroundColor: '#64B092', color: '#fff'}}
+          sx={{mb: 2, backgroundColor: '#64B092', color: '#fff', fontFamily: 'Lato, sans-serif'}}
         >
           Expense(s) has been approved successfully
         </Alert>
@@ -241,98 +212,15 @@ function SubmissionApprove() {
                       </div>
                     </div>
                     <div className="MuiBox-root jssss688">
-                      <div className="MuiPaper-root jss689 jssss690 MuiPaper-outlined MuiPaper-rounded">
-                        <div
-                          className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
-                          data-test-id="Holiday Inn_Emily_to reimburse item"
-                        >
-                          <div className="MuiGrid-root jssss632 MuiGrid-container MuiGrid-spacing-xs-2">
-                            <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                              <div className="MuiBox-root jssss691">
-                                <span
-                                  className="MuiButtonBase-root MuiIconButton-root jss675 MuiCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
-                                  aria-disabled="false"
-                                  style={{padding: 0, marginRight: 8}}
-                                >
-                                  <span className="MuiTouchRipple-root" />
-                                </span>
-                                <Checkbox />
-                                08/05/2023
-                              </div>
-                            </div>
-                            <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                              <span className="MuiTypography-root MuiTypography-h4">
-                                Meals & Ente...
-                              </span>
-                            </div>
-                            <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                              <span className="MuiTypography-root MuiTypography-h4">
-                                Starbucks
-                              </span>
-                            </div>
-                            <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                              <span className="MuiBox-root jss692 jss634">
-                                SGD
-                              </span>
-                              <span className="MuiBox-root jss693 jss630">
-                                <span className="MuiTypography-root MuiTypography-h4">
-                                  <b>12.90</b>
-                                </span>
-                              </span>
-                            </div>
-                            <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                              <div className="MuiBox-root jss720">
-                                <div className="MuiBox-root jss721 jss696 jss642">
-                                  <span className="MuiBadge-root sub-ava">
-                                    Pedro Santos
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                              <span className="MuiBox-root jss692 jss634">
-                                —
-                              </span>
-                            </div>
-                            <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1">
-                              <span className="MuiBox-root  jssss463">
-                                For Approval
-                              </span>
-                            </div>
-                            <div className="MuiGrid-root jss628 MuiGrid-item MuiGrid-grid-xs-1">
-                              <div className="MuiBox-root jss727">
-                                <button
-                                  className="MuiButtonBase-root MuiIconButton-root jss726"
-                                  tabIndex={0}
-                                  type="button"
-                                  data-test-id="icon-more"
-                                >
-                                  <span className="MuiIconButton-label">
-                                    <svg
-                                      className="MuiSvgIcon-root"
-                                      focusable="false"
-                                      viewBox="0 0 24 24"
-                                      aria-hidden="true"
-                                    >
-                                      <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-                                    </svg>
-                                  </span>
-                                  <span className="MuiTouchRipple-root" />
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                       <div
-                        className="MuiPaper-root jss689 jssss690 MuiPaper-outlined MuiPaper-rounded"
+                        className="MuiPaper-root jssss250 jssss251 MuiPaper-outlined MuiPaper-rounded"
                         onClick={handlePopupClickOpen}
                       >
                         <div
                           className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
-                          data-test-id="Holiday Inn_Emily_to reimburse item"
+                          data-test-id="Starbucks_Pedro_to approve item"
                         >
-                          <div className="MuiGrid-root jssss632 MuiGrid-container MuiGrid-spacing-xs-2">
+                          <div className="MuiGrid-root jssss225 MuiGrid-container MuiGrid-spacing-xs-2">
                             <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
                               <div className="MuiBox-root jssss691">
                                 <span
@@ -347,8 +235,12 @@ function SubmissionApprove() {
                               </div>
                             </div>
                             <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                              <span className="MuiTypography-root MuiTypography-h4">
-                                Meals & Ente...
+                              <span
+                                className="MuiTypography-root MuiTypography-h4"
+                                title="Meals & Entertainment"
+                                style={{cursor: 'pointer'}}
+                              >
+                                Meals &amp; Ente...
                               </span>
                             </div>
                             <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
@@ -460,8 +352,6 @@ function SubmissionApprove() {
                           </div>
                         </div>
                         <div className="MuiBox-root jss3148">Trip details</div>
-                        <div className="MuiBox-root jsss3148">Leg 1</div>
-                        <hr className="MuiDivider-root" />
                         <div className="MuiBox-root jss3270">
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
                             <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start depAiC">
@@ -522,43 +412,6 @@ function SubmissionApprove() {
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="MuiBox-root jss147">
-                        <div className="MuiBox-root jsss3148">Leg 2</div>
-                        <hr className="MuiDivider-root" />
-                        <div className="MuiBox-root jss3270">
-                          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
-                            <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start depAiC">
-                              <div className="MuiBox-root jsss3277">
-                                <div
-                                  className="MuiBox-root jss3278"
-                                  style={{
-                                    textTransform: 'uppercase',
-                                    height: 40,
-                                    alignItems: 'center',
-                                  }}
-                                >
-                                  <div className="MuiBox-root jss279 jss3276">
-                                    Departure
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="MuiBox-root jsss3281 jss3274 MuiGrid-item MuiGrid-grid-xs-true">
-                                <div
-                                  className="MuiBox-root jss3282"
-                                  data-test-id="section-value-undefined"
-                                >
-                                  <div className="MuiBox-root jss3283">
-                                    <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                      Singapore, 19 September 2023, 08:15
-                                    </div>
-                                  </div>
-                                  <div className="MuiBox-root jss288" />
-                                </div>
-                              </div>
-                            </div>
                             <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start depAiC">
                               <div className="MuiBox-root jsss3277">
                                 <div
@@ -581,7 +434,7 @@ function SubmissionApprove() {
                                 >
                                   <div className="MuiBox-root jss3283">
                                     <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                      Malaysia, 19 September 2023, 10:00
+                                    Singapore, 21 September 2023, 19:30
                                     </div>
                                   </div>
                                   <div className="MuiBox-root jss288" />
@@ -591,12 +444,14 @@ function SubmissionApprove() {
                           </div>
                         </div>
                       </div>
+                      <hr className="MuiDivider-root" style={{margin: '0 0 20px'}}/>
+
                       <div className="MuiBox-root jss147">
                         <div className="MuiBox-root jss3148">
                           Additional details
                         </div>
 
-                        <div className="MuiBox-root jss3270">
+                        <div className="MuiBox-root jss3270 jss32720">
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
                             <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start depAiC">
                               <div className="MuiBox-root jsss3277">
@@ -629,7 +484,7 @@ function SubmissionApprove() {
                             </div>
                           </div>
                         </div>
-                        <div className="MuiBox-root jss3270">
+                        <div className="MuiBox-root jss3270 jss32720">
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
                             <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start depAiC">
                               <div className="MuiBox-root jsss3277">
@@ -662,7 +517,7 @@ function SubmissionApprove() {
                             </div>
                           </div>
                         </div>
-                        <div className="MuiBox-root jss3270">
+                        <div className="MuiBox-root jss3270 jss32720">
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
                             <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start depAiC">
                               <div className="MuiBox-root jsss3277">
@@ -695,7 +550,7 @@ function SubmissionApprove() {
                             </div>
                           </div>
                         </div>
-                        <div className="MuiBox-root jss3270">
+                        <div className="MuiBox-root jss3270 jss32720">
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
                             <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start depAiC">
                               <div className="MuiBox-root jsss3277">
@@ -787,42 +642,6 @@ function SubmissionApprove() {
                           </span>
                         </div>
                       </div>
-                      <div
-                        className="MuiPaper-root MuiAlert-root MuiAlert-outlinedInfo jss246 MuiPaper-elevation0"
-                        role="alert"
-                      >
-                        <div className="MuiAlert-icon">
-                          <svg
-                            width={20}
-                            height={20}
-                            viewBox="0 0 20 20"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="MuiSvgIcon-root"
-                            focusable="false"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M2.60414 6.55641C2.0433 6.7492 1.66675 7.27682 1.66675 7.86987V8.96197H18.3334V3.09557C18.3334 2.1421 17.3947 1.47216 16.493 1.78211L2.60414 6.55641ZM2.60414 11.3675C2.0433 11.1748 1.66675 10.6471 1.66675 10.0541V8.96199H18.3334V14.8284C18.3334 15.7819 17.3947 16.4518 16.493 16.1418L2.60414 11.3675Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M4.09741 13.2698L11.5094 15.8176C10.9775 17.287 9.56981 18.337 7.91686 18.337C5.80744 18.337 4.09741 16.627 4.09741 14.5176V13.2698Z"
-                              fill="currentColor"
-                            />
-                          </svg>
-                        </div>
-                        <div className="MuiAlert-message">
-                          Select only the items that will be covered by the
-                          company (e.g. specific day’s per diem allowance), and
-                          indicate any deductions (e.g. free lunch or dinner
-                          included in hotel expense)
-                        </div>
-                      </div>
                       <div className="popsHead">
                         <h3>Per diem allowance breakdown</h3>
                         <strong>SGD 189.00</strong>
@@ -839,7 +658,7 @@ function SubmissionApprove() {
                                     </div>
                                     <div className="perDay-item-depart">
                                       <b>Malaysia,</b>{' '}
-                                      {'Depart >8AM or Arrive <6PM'}
+                                      {'Depart from home after 8am'}
                                     </div>
                                   </div>
                                 </div>
@@ -857,16 +676,16 @@ function SubmissionApprove() {
                                 <div>
                                   <div>
                                     <div className="perDay-item-date">
-                                      Tue, 19/09/2023
+                                    Wed, 20/09/2023
                                     </div>
                                     <div className="perDay-item-depart">
                                       <b>Malaysia,</b>{' '}
-                                      {'Depart >8AM or Arrive <6PM'}
+                                      {'Full daily rate'}
                                     </div>
                                   </div>
                                 </div>
                                 <div className="perDay-item-price">
-                                  SGD 43.00
+                                  SGD 86.00
                                 </div>
                               </div>
                             </div>
@@ -879,16 +698,16 @@ function SubmissionApprove() {
                                 <div>
                                   <div>
                                     <div className="perDay-item-date">
-                                      Tue, 19/09/2023
+                                    Thurs, 21/09/2023
                                     </div>
                                     <div className="perDay-item-depart">
                                       <b>Malaysia,</b>{' '}
-                                      {'Depart >8AM or Arrive <6PM'}
+                                      {'Full daily rate'}
                                     </div>
                                   </div>
                                 </div>
                                 <div className="perDay-item-price">
-                                  SGD 43.00
+                                  SGD 60.00
                                 </div>
                               </div>
                               <div className="perDay-tags">
@@ -910,7 +729,7 @@ function SubmissionApprove() {
                             <span className="text left">Results:</span>
                             <div className="jsss381">
                               <div className="jsss382" aria-haspopup="true">
-                                <span>1-1</span>
+                                <span>1-2</span>
                                 <button
                                   className="MuiButtonBase-root MuiIconButton-root jsss383"
                                   tabIndex={0}
@@ -939,7 +758,7 @@ function SubmissionApprove() {
                                 </button>
                               </div>
                             </div>
-                            <span className="text right">of 1</span>
+                            <span className="text right">of 2</span>
                           </div>
                           <div className="jsss393">
                             <button

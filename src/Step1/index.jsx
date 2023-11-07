@@ -29,7 +29,7 @@ function Step1() {
         <div className="MuiBox-root jss913 jss907">
           <div className="MuiBox-root jss914">
             <h2 className="MuiTypography-root MuiTypography-h2 MuiTypography-colorTextPrimary">
-            Edit per diem rates
+              Edit per diem rates
             </h2>
           </div>
         </div>
@@ -230,7 +230,7 @@ function Step1() {
                                       type="text"
                                       role="presentation"
                                       className="MuiInputBase-input MuiOutlinedInput-input"
-                                      defaultValue="Per diem A"
+                                      defaultValue="Singapore per diem policy 2024"
                                     />
                                     <fieldset
                                       aria-hidden="true"
@@ -310,8 +310,8 @@ function Step1() {
                                     placeholder="DD/MM/YYYY"
                                     type="text"
                                     role="presentation"
-                                    className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart"
-                                    defaultValue=""
+                                    className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart withDate"
+                                    defaultValue="01/01/2024"
                                   />
                                   <fieldset
                                     aria-hidden="true"
@@ -374,8 +374,8 @@ function Step1() {
                                     placeholder="DD/MM/YYYY"
                                     type="text"
                                     role="presentation"
-                                    className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart"
-                                    defaultValue=""
+                                    className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart withDate"
+                                    defaultValue="31/12/2024"
                                   />
                                   <fieldset
                                     aria-hidden="true"
@@ -584,7 +584,7 @@ function Step1() {
                           <div className="MuiBox-root jss2941">
                             <label className="MuiFormControlLabel-root jss2851">
                               <span
-                                className="MuiButtonBase-root MuiIconButton-root jss295 MuiRadio-root MuiRadio-colorPrimary jss2781 Mui-checked MuiIconButton-colorPrimary"
+                                className="MuiButtonBase-root MuiIconButton-root jss295 MuiRadio-root MuiRadio-colorPrimary jss2781 MuiIconButton-colorPrimary"
                                 aria-disabled="false"
                                 data-test-id="specific-group-radio-button"
                               >
@@ -596,7 +596,7 @@ function Step1() {
                                     defaultChecked=""
                                     name="mui-51444"
                                   />
-                                  <div className="jss299 jss301">
+                                  <div className="jss299 ">
                                     <svg
                                       className="MuiSvgIcon-root"
                                       focusable="false"
@@ -625,7 +625,7 @@ function Step1() {
                           <div className="MuiBox-root jss2941">
                             <label className="MuiFormControlLabel-root jss2851">
                               <span
-                                className="MuiButtonBase-root MuiIconButton-root jss295 MuiRadio-root MuiRadio-colorPrimary jss2781 MuiIconButton-colorPrimary"
+                                className="MuiButtonBase-root MuiIconButton-root jss295 MuiRadio-root MuiRadio-colorPrimary jss2781 Mui-checked MuiIconButton-colorPrimary"
                                 aria-disabled="false"
                                 data-test-id="specific-employee-radio-button"
                               >
@@ -636,7 +636,7 @@ function Step1() {
                                     defaultValue={2}
                                     name="mui-51444"
                                   />
-                                  <div className="jss299">
+                                  <div className="jss299 jss301">
                                     <svg
                                       className="MuiSvgIcon-root"
                                       focusable="false"
@@ -1030,7 +1030,7 @@ function Step1() {
                                         autoCapitalize="none"
                                         spellCheck="false"
                                         role="presentation"
-                                        defaultValue="Custom group"
+                                        defaultValue="Department"
                                       />
                                       <div className="MuiAutocomplete-endAdornment">
                                         <button
@@ -1117,7 +1117,7 @@ function Step1() {
                                       data-tag-index={0}
                                     >
                                       <span className="MuiChip-label">
-                                        Singapore business travellers
+                                        Business development
                                       </span>
                                       <svg
                                         className="MuiSvgIcon-root MuiChip-deleteIcon"
@@ -1135,7 +1135,7 @@ function Step1() {
                                       data-tag-index={1}
                                     >
                                       <span className="MuiChip-label">
-                                        C-level
+                                        Management
                                       </span>
                                       <svg
                                         className="MuiSvgIcon-root MuiChip-deleteIcon"

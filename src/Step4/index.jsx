@@ -240,45 +240,101 @@ function Step4() {
                   </div>
                 </div>
               </div>
-              <div className="MuiPaper-root jss293 jss294 MuiPaper-outlined MuiPaper-rounded" onClick={handleClickOpen}>
-                <div
-                  className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
-                  data-test-id="Hotel-category"
-                >
-                  <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                    <span
-                      className="MuiTypography-root MuiTypography-h5"
-                      style={{
-                        fontWeight: 400,
-                        marginRight: 8,
-                        display: 'inline-block',
-                      }}
+              <div className="MuiBox-root jsss5295" >
+                  <div className="MuiPaper-root jss297 jsss5298 MuiPaper-outlined MuiPaper-rounded" onClick={handleClickOpen}>
+                    <div
+                      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+                      data-test-id="Intern"
                     >
-                      Lunch provided
-                    </span>
-                  </div>
-                  <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                    30%
-                  </div>
-                  <div className="MuiGrid-root MuiGrid-item">
-                    <button
-                      className="MuiButtonBase-root MuiIconButton-root jss820 MuiIconButton-colorSecondary"
-                      tabIndex="{0}"
-                      type="button"
-                    >
-                      <span className="MuiIconButton-label">
-                        <svg
-                          className="MuiSvgIcon-root"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
+                      <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                        <span
+                          className="MuiTypography-root MuiTypography-h5"
+                          style={{whiteSpace: 'nowrap', overflow: 'clip'}}
                         >
-                          <path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" />
-                        </svg>
-                      </span>
-                    </button>
+                          Lunch provided
+                        </span>
+                      </div>
+                      <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                        <div
+                          className="MuiBox-root jsss5299"
+                          data-test-id="include-index"
+                          style={{gap: 8}}
+                        >
+                          30%
+                        </div>
+                      </div>
+                      <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2">
+                        <div className="MuiBox-root jsss5301">
+                          <button
+                            className="MuiButtonBase-root MuiIconButton-root jsss5300"
+                            tabIndex={0}
+                            type="button"
+                            data-test-id="icon-more"
+                          >
+                            <span className="MuiIconButton-label">
+                              <svg
+                                className="MuiSvgIcon-root"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                              >
+                                <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                              </svg>
+                            </span>
+                            <span className="MuiTouchRipple-root" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+              </div>
+              <div className="MuiBox-root jsss5295" >
+                  <div className="MuiPaper-root jss297 jsss5298 MuiPaper-outlined MuiPaper-rounded" onClick={handleClickOpen}>
+                    <div
+                      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+                      data-test-id="Intern"
+                    >
+                      <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                        <span
+                          className="MuiTypography-root MuiTypography-h5"
+                          style={{whiteSpace: 'nowrap', overflow: 'clip'}}
+                        >
+                          Dinner provided
+                        </span>
+                      </div>
+                      <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                        <div
+                          className="MuiBox-root jsss5299"
+                          data-test-id="include-index"
+                          style={{gap: 8}}
+                        >
+                          40%
+                        </div>
+                      </div>
+                      <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2">
+                        <div className="MuiBox-root jsss5301">
+                          <button
+                            className="MuiButtonBase-root MuiIconButton-root jsss5300"
+                            tabIndex={0}
+                            type="button"
+                            data-test-id="icon-more"
+                          >
+                            <span className="MuiIconButton-label">
+                              <svg
+                                className="MuiSvgIcon-root"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                              >
+                                <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                              </svg>
+                            </span>
+                            <span className="MuiTouchRipple-root" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
               <Popup
                 open={open}
@@ -499,46 +555,6 @@ function Step4() {
                   </div>
                 </div>
               </Popup>
-              <div className="MuiPaper-root jss293 jss294 MuiPaper-outlined MuiPaper-rounded">
-                <div
-                  className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
-                  data-test-id="Hotel-category"
-                >
-                  <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                    <span
-                      className="MuiTypography-root MuiTypography-h5"
-                      style={{
-                        fontWeight: 400,
-                        marginRight: 8,
-                        display: 'inline-block',
-                      }}
-                    >
-                      Dinner provided
-                    </span>
-                  </div>
-                  <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                    40%
-                  </div>
-                  <div className="MuiGrid-root MuiGrid-item">
-                    <button
-                      className="MuiButtonBase-root MuiIconButton-root jss820 MuiIconButton-colorSecondary"
-                      tabIndex="{0}"
-                      type="button"
-                    >
-                      <span className="MuiIconButton-label">
-                        <svg
-                          className="MuiSvgIcon-root"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
-                        >
-                          <path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" />
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 

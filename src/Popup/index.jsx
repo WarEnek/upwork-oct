@@ -23,15 +23,16 @@ export default function Popup({
       aria-describedby="modal-desc"
       open={open}
       onClose={onClose}
-      sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+      sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)'}}
     >
       <Sheet
         className="modal"
         variant="outlined"
         sx={{
           maxWidth: maxWidth || '500px',
-          borderRadius: 'md',
+          borderRadius: '14px',
           boxShadow: 'lg',
+          fontFamily: 'Lato, sans-serif'
         }}
       >
         <div>
@@ -208,6 +209,18 @@ export default function Popup({
                   <span className="MuiTouchRipple-root" />
                 </button>
               </div>
+              <div className="MuiGrid-root MuiGrid-item">
+                  <button
+                    className="MuiButtonBase-root MuiButton-root jss182 MuiButton-contained MuiButton-containedPrimary"
+                    tabIndex={0}
+                    type="button"
+                    data-test-id="next-btn"
+                    onClick={onClose}
+                  >
+                    <span className="MuiButton-label">Save</span>
+                    <span className="MuiTouchRipple-root" />
+                  </button>
+                </div>
               {prev && (
                 <div className="MuiGrid-root MuiGrid-item">
                   <button

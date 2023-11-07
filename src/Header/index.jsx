@@ -5,7 +5,7 @@ import userAva from '../assets/Emily_Tan_IenxnIz.png';
 import userAvaPedro from '../assets/SantosPedroSantos.png';
 
 function Header() {
-
+  const isSub = window.location.pathname === '/submission' || window.location.pathname === '/submission-submitted'
   return (
     <header className="jss79">
       <div className="jss80">
@@ -44,13 +44,13 @@ function Header() {
             data-test-id="ET-undefined"
             style={{width: 40, height: 40, borderRadius: 40}}
           >
-            {window.location.pathname === '/submission' || window.location.pathname === '/submission-submitted' ? (
+            {isSub ? (
               <img alt="Pedro" src={userAvaPedro} className="MuiAvatar-img" />
             ) : (
               <img alt="Emily Tan" src={userAva} className="MuiAvatar-img" />
             )}
           </div>
-          <div className="MuiBox-root jss110">Emily Tan</div>
+          <div className="MuiBox-root jss110">{isSub ? 'Pedro Santos' : 'Emily Tan'}</div>
           <div className="MuiBox-root jss111">
             <div className="MuiBox-root jss112 jss84" data-test-id="user-menu">
               <svg

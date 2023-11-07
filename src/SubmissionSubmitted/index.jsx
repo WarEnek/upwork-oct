@@ -1,41 +1,22 @@
 import {useRef, useEffect, useState} from 'react';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import userAva from '../assets/Emily_Tan_IenxnIz.png';
 
-import Checkbox from '../Checkbox';
-import Popup from '../Popup';
+import userAva from '../assets/Emily_Tan_IenxnIz.png';
+import Collapse from '@mui/material/Collapse';
+import IconButton from '@mui/material/IconButton';
+import Alert from '@mui/material/Alert';
+import CloseIcon from '@mui/icons-material/Close';
+
+
 import Header from '../Header';
 import Aside from '../Aside';
-import Input from '../Input';
 
 function SubmissionSubmitted() {
-  const [openPopup, setOpenPopup] = useState(false);
-  const [openPopupStep2, setOpenPopupStep2] = useState(false);
-
-  const handlePopupStep2ClickOpen = () => {
-    setOpenPopupStep2(true);
-    setOpenPopup(false);
-  };
-
-  const handlePopupClickOpen = () => {
-    setOpenPopup(true);
-  };
-
-  const handlePopupStep2ClickClose = (value) => {
-    setOpenPopupStep2(false);
-  };
-  const handlePopupClose = (value) => {
-    setOpenPopup(false);
-  };
+  const [openAlert, setOpenAlert] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setOpenAlert(false)
+    }, 4000)
+  }, [])
 
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
@@ -43,23 +24,6 @@ function SubmissionSubmitted() {
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
-
-  const handleClose = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
-    }
-
-    setOpen(false);
-  };
-
-  function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === 'Escape') {
-      setOpen(false);
-    }
-  }
 
   // return focus to the button when we transitioned from !open -> open
   const prevOpen = useRef(open);
@@ -74,6 +38,27 @@ function SubmissionSubmitted() {
   return (
     <div className="jss70">
       <Header />
+      <Collapse in={openAlert} className='colapseAlert'>
+        <Alert
+          severity="success"
+          variant="filled"
+          action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpenAlert(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          }
+          sx={{mb: 2, backgroundColor: '#64B092', color: '#fff', fontFamily: 'Lato, sans-serif'}}
+        >
+          Expense has been submitted successfully
+        </Alert>
+      </Collapse>
       <main className="jss71">
         <Aside />
         <div className="jss73">
@@ -235,7 +220,7 @@ function SubmissionSubmitted() {
                                       >
                                         <span className="MuiTouchRipple-root" />
                                       </span>
-                                      08/05/2023
+                                      30/10/2023
                                     </div>
                                   </div>
                                   <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">

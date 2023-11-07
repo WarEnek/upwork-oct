@@ -2716,6 +2716,12 @@ label[data-shrink='false']
 .MuiInputBase-root .MuiInputBase-input {
   padding: 0;
 }
+.MuiOutlinedInput-input.withDate {
+  padding: 18.5px 14px;
+}
+.MuiOutlinedInput-input:-webkit-autofill {
+  border-radius: inherit;
+}
 .MuiInputBase-root.Mui-disabled {
   color: #a8a9b6;
   background: #f8f9fb;
@@ -2772,12 +2778,6 @@ label[data-shrink='false']
 }
 .MuiOutlinedInput-notchedOutline {
   border-color: rgba(0, 0, 0, 0.23);
-}
-.MuiOutlinedInput-input {
-  padding: 18.5px 14px;
-}
-.MuiOutlinedInput-input:-webkit-autofill {
-  border-radius: inherit;
 }
 .MuiOutlinedInput-inputMarginDense {
   padding-top: 10.5px;
@@ -3551,6 +3551,7 @@ label[data-shrink='false']
 .jss294 {
   padding: 16px 24px;
   margin-bottom: 12px;
+  text-decoration: none;
 }
 .jss294:hover {
   cursor: pointer;
@@ -3667,7 +3668,8 @@ label[data-shrink='false']
 
 .jss488 {
   flex: 1;
-  height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px);
+  /* height: calc(100vh - 65px); */
   display: grid;
   grid-template-rows: auto auto 1fr;
 }
@@ -3839,6 +3841,7 @@ activeScrollSpy > .jss495 {
   font-size: 14px;
   margin-top: 0px;
   line-height: 14.4px;
+  margin-left: 4px;
 }
 .jss632 {
   position: relative;
@@ -3982,7 +3985,7 @@ activeScrollSpy > .jss495 {
   padding-bottom: 0;
 }
 .jss279 {
-  color: #425061;
+  color: #61758f;
 }
 .jss280 {
   flex: 1;
@@ -4029,7 +4032,7 @@ activeScrollSpy > .jss495 {
   align-items: center;
 }
 .jss279 {
-  color: #425061;
+  color: #61758f;
 }
 .jss309 {
   width: 28px;
@@ -4240,6 +4243,8 @@ activeScrollSpy > .jss495 {
   box-shadow: 1px 2px 2px rgba(217, 221, 228, 0.4);
   font-weight: 600;
   text-transform: none;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .perDiemText {
@@ -4290,9 +4295,14 @@ activeScrollSpy > .jss495 {
 }
 .jss247 {
   display: flex;
-  padding: 16px 16px 16px 8px;
+  padding: 16px 24px;
   align-items: center;
   margin-bottom: 12px;
+  transition: 0.2s all;
+}
+.jss247:hover {
+  cursor: pointer;
+  border-color: rgb(98, 97, 181);
 }
 [data-rbd-drag-handle-context-id='0'] {
   cursor: -webkit-grab;
@@ -4706,11 +4716,15 @@ activeScrollSpy > .jss495 {
 }
 
 .jss3270 {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+.jss32720 {
+  margin: 0;
+}
+
 .jss3277 {
-  min-width: 105px;
+  min-width: 161px;
 }
 .jss3278 {
   color: rgb(97, 117, 143);
@@ -5226,7 +5240,6 @@ activeScrollSpy > .jss495 {
   position: absolute;
   right: -303px;
   top: 20px;
-
 }
 
 .stagesCircle {
@@ -5379,6 +5392,11 @@ activeScrollSpy > .jss495 {
   gap: 12px;
 }
 
+button.perDay-tags-chip {
+  border: 0;
+  cursor: pointer;
+}
+
 .perDay-tags-chip {
   border-radius: 5px;
   background: #f0f0f8;
@@ -5392,7 +5410,9 @@ activeScrollSpy > .jss495 {
   line-height: normal;
   letter-spacing: 0.2px;
   text-transform: uppercase;
+  transition: .2s all;
 }
+
 .perDay-tags-chip.active {
   background: #6e6dcc;
   color: #fff;
@@ -5480,7 +5500,7 @@ activeScrollSpy > .jss495 {
 }
 .MuiButton-outlinedError {
   color: rgb(211, 47, 47);
-  border:1px solid rgba(211, 47, 47, 0.5);
+  border: 1px solid rgba(211, 47, 47, 0.5);
 }
 .jssss401.MuiButton-outlined.MuiButton-outlinedSecondary:hover {
   color: #ff9599;
@@ -5643,5 +5663,93 @@ activeScrollSpy > .jss495 {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  top: 24px; 
+  top: 24px;
+}
+.jsss5295 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 12px;
+  transition: 0.2s all;
+}
+
+.jsss5298 {
+  padding: 16px 24px;
+  margin-bottom: 12px;
+  transition: 0.2s all;
+}
+.jsss5298:hover {
+  cursor: pointer;
+  border-color: rgb(98, 97, 181);
+}
+.jsss5298:last-child {
+  margin-bottom: 0px;
+}
+.jsss5299 {
+  display: flex;
+  align-items: center;
+}
+.jsss5301 {
+  position: relative;
+  text-align: right;
+}
+.jsss5300 {
+  color: #6261b5;
+  padding: 0;
+}
+.jssss961 {
+  flex: 1 1 0%;
+  justify-content: flex-start;
+}
+.jss962 {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: start;
+}
+.jssss852 {
+  font-size: 14px;
+  box-shadow: 1px 2px 2px rgba(217, 221, 228, 0.4);
+  font-weight: 600;
+  text-transform: none;
+}
+.jssss852.MuiButton-text {
+  color: #61758f;
+  border: none;
+  box-shadow: none;
+}
+.jssss852.MuiButton-text .MuiSvgIcon-root {
+  filter: invert(66%) sepia(11%) saturate(793%) hue-rotate(175deg)
+    brightness(83%) contrast(83%);
+}
+
+.jssss147 {
+  margin-top: 30px;
+}
+.jssss251 {
+    padding: 4px 24px;
+    margin-bottom: 12px;
+    transition: .2s all;
+}
+.jssss251:hover {
+  cursor: pointer;
+  border-color: rgb(98, 97, 181);
+}
+.jssss251:last-child {
+    margin-bottom: 0px;
+}
+.jssss225 {
+    align-items: center;
+}
+.jssss221 {
+    text-align: right;
+    align-items: center;
+    justify-content: flex-end;
+}
+.jssss260 {
+    position: relative;
+    text-align: right;
+}
+.jssss259 {
+    color: #6261B5;
+    padding: 0;
 }

@@ -32,6 +32,7 @@ export default function Input({options, value, placeholder}) {
       }
       sx={{
         background: '#f7f7fb',
+        boxShadow: 'none',
         height: '40px',
         fontSize: 14,
         fontWeight: 400,

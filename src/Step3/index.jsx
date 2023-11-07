@@ -251,27 +251,6 @@ function Step3() {
                 data-rbd-draggable-context-id={0}
                 data-rbd-draggable-id={116}
               >
-                <div
-                  tabIndex={0}
-                  role="button"
-                  aria-describedby="rbd-hidden-text-0-hidden-text-0"
-                  data-rbd-drag-handle-draggable-id={116}
-                  data-rbd-drag-handle-context-id={0}
-                  draggable="false"
-                  className="jss239"
-                  data-test-id="drag-icon"
-                  title=""
-                >
-                  <svg
-                    className="MuiSvgIcon-root jss242"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    width={24}
-                  >
-                    <path d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-                  </svg>
-                </div>
                 <div className="MuiGrid-root jss240 MuiGrid-container MuiGrid-align-items-xs-center">
                   <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2">
                     <div className="MuiGrid-root jss230 jss221 MuiGrid-item MuiGrid-grid-xs-4">
@@ -299,7 +278,7 @@ function Step3() {
                               </div>
                               <div className="MuiBox-root jss253 jss227">
                                 <span className="MuiTypography-root MuiTypography-h4">
-                                  Longer than 14 days
+                                  {'> 14 days 50%'}
                                 </span>
                               </div>
                             </div>
@@ -312,7 +291,7 @@ function Step3() {
                         <div className="MuiBox-root jss255">
                           <div className="MuiBox-root jss257 jss227">
                             <span className="MuiTypography-root MuiTypography-h4">
-                              80%
+                              50%
                             </span>
                           </div>
                         </div>
@@ -727,27 +706,6 @@ function Step3() {
                 data-rbd-draggable-context-id={0}
                 data-rbd-draggable-id={116}
               >
-                <div
-                  tabIndex={0}
-                  role="button"
-                  aria-describedby="rbd-hidden-text-0-hidden-text-0"
-                  data-rbd-drag-handle-draggable-id={116}
-                  data-rbd-drag-handle-context-id={0}
-                  draggable="false"
-                  className="jss239"
-                  data-test-id="drag-icon"
-                  title=""
-                >
-                  <svg
-                    className="MuiSvgIcon-root jss242"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    width={24}
-                  >
-                    <path d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-                  </svg>
-                </div>
                 <div className="MuiGrid-root jss240 MuiGrid-container MuiGrid-align-items-xs-center">
                   <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2">
                     <div className="MuiGrid-root jss230 jss221 MuiGrid-item MuiGrid-grid-xs-4">
@@ -757,7 +715,7 @@ function Step3() {
                             <div className="MuiBox-root jss251">
                               <div className="MuiBox-root jss253 jss227">
                                 <span className="MuiTypography-root MuiTypography-h4">
-                                  {'Depart>8AM or Arrive<6PM'}
+                                  {'Depart from home after 8am'}
                                 </span>
                               </div>
                             </div>
@@ -771,21 +729,11 @@ function Step3() {
                           <span className="MuiBox-root jss250">
                             <div className="MuiBox-root jss251">
                               <div className="MuiBox-root jss252 jss226">
-                                First day before:
+                                First day:
                               </div>
                               <div className="MuiBox-root jss253 jss227">
                                 <span className="MuiTypography-root MuiTypography-h4">
-                                  8:00AM
-                                </span>
-                              </div>
-                            </div>
-                            <div className="MuiBox-root jss251">
-                              <div className="MuiBox-root jss252 jss226">
-                                AND Last day after:
-                              </div>
-                              <div className="MuiBox-root jss253 jss227">
-                                <span className="MuiTypography-root MuiTypography-h4">
-                                  6:00PM
+                                  Before 08:00am 
                                 </span>
                               </div>
                             </div>
@@ -798,7 +746,89 @@ function Step3() {
                         <div className="MuiBox-root jss255">
                           <div className="MuiBox-root jss257 jss227">
                             <span className="MuiTypography-root MuiTypography-h4">
-                              80%
+                              50% first day
+                            </span>
+                          </div>
+                        </div>
+                      </span>
+                    </div>
+                    <div className="MuiGrid-root jss232 MuiGrid-item MuiGrid-grid-xs-true">
+                      <span className="MuiBox-root jss258" title="">
+                        <button
+                          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary MuiIconButton-sizeSmall"
+                          tabIndex={0}
+                          type="button"
+                          data-test-id="trash-icon"
+                        >
+                          <span className="MuiIconButton-label">
+                            <svg
+                              className="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z" />
+                            </svg>
+                          </span>
+                          <span className="MuiTouchRipple-root" />
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-rbd-droppable-id="newRules"
+              data-rbd-droppable-context-id={0}
+            >
+              <div
+                className="MuiPaper-root jss241 jss247 MuiPaper-outlined MuiPaper-rounded"
+                data-test-id="approval-rule-1"
+                data-rbd-draggable-context-id={0}
+                data-rbd-draggable-id={116}
+              >
+                <div className="MuiGrid-root jss240 MuiGrid-container MuiGrid-align-items-xs-center">
+                  <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2">
+                    <div className="MuiGrid-root jss230 jss221 MuiGrid-item MuiGrid-grid-xs-4">
+                      <div className="MuiBox-root jss248">
+                        <div className="MuiBox-root jss249">
+                          <span className="MuiBox-root jss250">
+                            <div className="MuiBox-root jss251">
+                              <div className="MuiBox-root jss253 jss227">
+                                <span className="MuiTypography-root MuiTypography-h4">
+                                  {'Arrival at home before 6pm'}
+                                </span>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root jss230 jss221 MuiGrid-item MuiGrid-grid-xs-4">
+                      <div className="MuiBox-root jss248">
+                        <div className="MuiBox-root jss249">
+                          <span className="MuiBox-root jss250">
+                            <div className="MuiBox-root jss251">
+                              <div className="MuiBox-root jss252 jss226">
+                              Last day:
+                              </div>
+                              <div className="MuiBox-root jss253 jss227">
+                                <span className="MuiTypography-root MuiTypography-h4">
+                                After 06:00pm
+                                </span>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root jss230 MuiGrid-item MuiGrid-grid-xs-3">
+                      <span className="MuiBox-root jss254" title="">
+                        <div className="MuiBox-root jss255">
+                          <div className="MuiBox-root jss257 jss227">
+                            <span className="MuiTypography-root MuiTypography-h4">
+                            50% last day
                             </span>
                           </div>
                         </div>

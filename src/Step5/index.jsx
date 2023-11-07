@@ -200,7 +200,7 @@ function Step5() {
                         }}
                       >
                         <div className="MuiBox-root jss5515 jss5508 jss5122">
-                          name of PER DIEM
+                          Per diem name
                         </div>
                       </div>
                     </div>
@@ -209,7 +209,7 @@ function Step5() {
                         className="MuiBox-root jss5517"
                         data-test-id="section-value-undefined"
                       >
-                        Per Diem A
+                        Singapore per diem policy 2024
                         <div className="MuiBox-root jss5518" />
                       </div>
                     </div>
@@ -235,7 +235,7 @@ function Step5() {
                         className="MuiBox-root jss5517"
                         data-test-id="section-value-undefined"
                       >
-                        01/11/2023 - 31/12/2023
+                        01/01/2024 - 31/12/2024
                         <div className="MuiBox-root jss5518" />
                       </div>
                     </div>
@@ -323,15 +323,14 @@ function Step5() {
             </div>
             <div className="MuiBox-root jss5550">
               <h5 className="MuiTypography-root MuiTypography-h5 MuiTypography-colorTextPrimary">
-                Set the start and end dates for each performance review type
+              Per diem & deduction rates
               </h5>
               <div className="MuiBox-root jss551">
                 <p
                   className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
                   style={{lineHeight: '14.4px', fontSize: 12}}
                 >
-                  On the start date, the employees, managers and peers will
-                  receive an email about the review.
+                  Based on the rules & conditions applied
                 </p>
               </div>
               <div className="MuiBox-root jss5553">
@@ -342,240 +341,85 @@ function Step5() {
                   <h6 className="MuiTypography-root MuiTypography-h6 MuiTypography-colorTextSecondary">
                     AMOUNT
                   </h6>
-                  <h6 className="MuiTypography-root MuiTypography-h6 MuiTypography-colorTextSecondary">
-                    Trip is longer than 14 days
-                  </h6>
-                  <h6 className="MuiTypography-root MuiTypography-h6 MuiTypography-colorTextSecondary">
-                    {'Depart>8AM or Arrive<6PM'}
-                  </h6>
-                  <h6 className="MuiTypography-root MuiTypography-h6 MuiTypography-colorTextSecondary">
-                    LUNCH PROVIDED
-                  </h6>
-                  <h6 className="MuiTypography-root MuiTypography-h6 MuiTypography-colorTextSecondary">
-                    DINNER PROVIDED
-                  </h6>
                 </div>
                 <div className="MuiBox-root jss555 jss5552">
                   <div className="MuiBox-root jss5556">
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      Afghanistan
+                    Australia
                     </h6>
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      86.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      69.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      43.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (25.00)
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (34.00)
+                    118.00
                     </h6>
                   </div>
                 </div>
                 <div className="MuiBox-root jss555 jss5552">
                   <div className="MuiBox-root jss5556">
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      Albania
+                    Cambodia
                     </h6>
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      64.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      51.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      32.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (19.00)
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (25.00)
+                    136.00
                     </h6>
                   </div>
                 </div>
                 <div className="MuiBox-root jss555 jss5552">
                   <div className="MuiBox-root jss5556">
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      Albania
+                    Hong Kong
                     </h6>
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      64.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      51.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      32.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (19.00)
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (25.00)
+                    93.00
                     </h6>
                   </div>
                 </div>
                 <div className="MuiBox-root jss555 jss5552">
                   <div className="MuiBox-root jss5556">
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      Albania
+                    India
                     </h6>
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      64.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      51.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      32.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (19.00)
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (25.00)
+                    111.00
                     </h6>
                   </div>
                 </div>
                 <div className="MuiBox-root jss555 jss5552">
                   <div className="MuiBox-root jss5556">
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      Albania
+                    Japan
                     </h6>
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      64.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      51.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      32.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (19.00)
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (25.00)
+                    169.00
                     </h6>
                   </div>
                 </div>
                 <div className="MuiBox-root jss555 jss5552">
                   <div className="MuiBox-root jss5556">
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      Albania
+                    Malaysia
                     </h6>
                     <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      64.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      51.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      32.00
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (19.00)
-                    </h6>
-                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
-                      (25.00)
+                    86.00
                     </h6>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="snowMore mb-32">
-              <div className="showMoreText">
-                Show more
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="17"
-                  viewBox="0 0 16 17"
-                  fill="none"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M8.40517 10.9647L12.5252 6.85873C12.7502 6.61968 12.7502 6.25408 12.5252 6.02909C12.3002 5.8041 11.9206 5.8041 11.6956 6.02909L7.99738 9.72731L4.29916 6.02909C4.06011 5.8041 3.69451 5.8041 3.46952 6.02909C3.24453 6.25408 3.24453 6.61968 3.46952 6.85873L7.57553 10.9647C7.81458 11.1897 8.18018 11.1897 8.40517 10.9647Z"
-                    fill="#6261B5"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="MuiBox-root jss562 jss5557">
-              <div className="MuiBox-root jss563">
-                <h2 className="MuiTypography-root MuiTypography-h2">
-                  General rules
-                </h2>
-              </div>
-              <div className="addingMoreGap">
-                <div className="MuiBox-root jss5565" bis_skin_checked={1}>
-                  <p
-                    className="MuiTypography-root MuiTypography-body1"
-                    style={{fontWeight: 700}}
-                  >
-                    During individual review cycle (View and Edit)
-                  </p>
-                </div>
-
-                <div className="MuiBox-root jss566 jss5559">
-                  <div className="MuiBox-root jss5567">
-                    <div className="MuiBox-root jss5568">
-                      <svg
-                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                      </svg>
-                    </div>
-                    <p className="MuiTypography-root jss5561 MuiTypography-body1">
-                      Reviewee can only see and do their own self review,
-                      without seeing their manager review.
-                    </p>
+                <div className="MuiBox-root jss555 jss5552">
+                  <div className="MuiBox-root jss5556">
+                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
+                    Thailand
+                    </h6>
+                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
+                    84.00
+                    </h6>
                   </div>
                 </div>
-                <div className="MuiBox-root jss566 jss5559">
-                  <div className="MuiBox-root jss5567">
-                    <div className="MuiBox-root jss5568">
-                      <svg
-                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                      </svg>
-                    </div>
-                    <p className="MuiTypography-root jss5561 MuiTypography-body1">
-                      For last day, the departure country per diem rate will
-                      apply.
-                    </p>
-                  </div>
-                </div>
-                <div className="MuiBox-root jss566 jss5559">
-                  <div className="MuiBox-root jss5567">
-                    <div className="MuiBox-root jss5568">
-                      <svg
-                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                      </svg>
-                    </div>
-                    <p className="MuiTypography-root jss5561 MuiTypography-body1">
-                      For other days, employees will be able to choose which per
-                      diem rate will apply for that day.
-                    </p>
+                <div className="MuiBox-root jss555 jss5552">
+                  <div className="MuiBox-root jss5556">
+                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
+                    Vietnam
+                    </h6>
+                    <h6 className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary">
+                    60.00
+                    </h6>
                   </div>
                 </div>
               </div>
@@ -586,16 +430,6 @@ function Step5() {
 
           <div className="MuiBox-root jss783">
             <div className="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-space-between">
-              <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
-                <button
-                  className="MuiButtonBase-root MuiButton-root jss182 MuiButton-outlined MuiButton-outlinedPrimary btn-notup"
-                  tabIndex="0"
-                  type="button"
-                >
-                  <span className="MuiButton-label">Save As Draft</span>
-                  <span className="MuiTouchRipple-root"></span>
-                </button>
-              </div>
               <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-true">
                 <div className="MuiGrid-root MuiGrid-item">
                   <a
@@ -609,15 +443,16 @@ function Step5() {
                   </a>
                 </div>
                 <div className="MuiGrid-root MuiGrid-item">
-                  <button
+                  <a
+                    href="/#success"
                     className="MuiButtonBase-root MuiButton-root jss182 MuiButton-contained MuiButton-containedPrimary"
                     tabIndex={0}
                     type="button"
                     data-test-id="next-btn"
                   >
-                    <span className="MuiButton-label">Next</span>
+                    <span className="MuiButton-label">Save</span>
                     <span className="MuiTouchRipple-root" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

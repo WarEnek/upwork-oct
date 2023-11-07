@@ -1,9 +1,48 @@
+import {useRef, useEffect, useState} from 'react';
+
+import Collapse from '@mui/material/Collapse';
+import IconButton from '@mui/material/IconButton';
+import Alert from '@mui/material/Alert';
+import CloseIcon from '@mui/icons-material/Close';
 import Header from '../Header';
 import Aside from '../Aside';
+
 function Example() {
+  const [openAlert, setOpenAlert] = useState(false);
+  useEffect(() => {
+    if (window.location.hash.substring(1) === 'success') {
+      setOpenAlert(true)
+      setTimeout(() => {
+        setOpenAlert(false)
+      }, 4000)
+    }
+
+  }, [])
+  
   return (
     <div className="jss70">
       <Header />
+      <Collapse in={openAlert} className='colapseAlert'>
+        <Alert
+          severity="success"
+          variant="filled"
+          action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpenAlert(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          }
+          sx={{mb: 2, backgroundColor: '#64B092', color: '#fff', fontFamily: 'Lato, sans-serif'}}
+        >
+          Per diem policy has been saved successfully
+        </Alert>
+      </Collapse>
       <main className="jss71">
         <Aside />
         <div className="jss73">
@@ -112,7 +151,7 @@ function Example() {
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
                             <h6 className="MuiTypography-root jss286 jss289 MuiTypography-h6">
-                              PERIOD
+                              Applicable period
                             </h6>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3">
@@ -140,11 +179,11 @@ function Example() {
                                 display: 'inline-block',
                               }}
                             >
-                              Per diem A
+                              {'Per diem A -> Singapore per diem policy 2024'}
                             </span>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
-                            01/04/2023 - 31/03/2024
+                            01/01/2024 - 31/12/2024
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3">
                             <span
@@ -192,11 +231,11 @@ function Example() {
                                 display: 'inline-block',
                               }}
                             >
-                              Per diem B
+                              {'Per diem B -> Singapore per diem policy 2023'}
                             </span>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
-                            01/04/2023 - 31/03/2024
+                            01/01/2023 - 31/12/2023
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3">
                             <span
@@ -244,11 +283,11 @@ function Example() {
                                 display: 'inline-block',
                               }}
                             >
-                              Per diem C
+                              {'Per diem C -> Singapore per diem policy 2022'}
                             </span>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
-                            01/04/2023 - 31/03/2024
+                            01/01/2022 - 31/12/2022
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3">
                             <span
@@ -296,11 +335,11 @@ function Example() {
                                 display: 'inline-block',
                               }}
                             >
-                              Per diem D
+                              {'Per diem D -> Malaysia per diem policy 2024'}
                             </span>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
-                            01/04/2023 - 31/03/2024
+                            01/01/2024 - 31/12/2024
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3">
                             <span
@@ -348,11 +387,11 @@ function Example() {
                                 display: 'inline-block',
                               }}
                             >
-                              Per diem A
+                              {'Per diem A -> Malaysia per diem policy 2023'}
                             </span>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
-                            01/04/2023 - 31/03/2024
+                            01/01/2023 - 31/12/2023
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3">
                             <span

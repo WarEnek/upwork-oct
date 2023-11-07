@@ -375,7 +375,7 @@ function Step2() {
                             {label: 'Angola', value: 'value3'},
                             {label: 'Anguilla', value: 'value3'},
                           ]}
-                          value="Albania"
+                          value="Australia"
                         />
                       </div>
                     </div>
@@ -392,7 +392,7 @@ function Step2() {
                               type="text"
                               role="presentation"
                               className="MuiInputBase-input MuiOutlinedInput-input"
-                              defaultValue="64.00"
+                              defaultValue="118.00"
                             />
                             <fieldset
                               aria-hidden="true"
@@ -444,7 +444,7 @@ function Step2() {
                             {label: 'Angola', value: 'value3'},
                             {label: 'Anguilla', value: 'value3'},
                           ]}
-                          value="Algeria"
+                          value="Cambodia"
                         />
                       </div>
                     </div>
@@ -461,7 +461,7 @@ function Step2() {
                               type="text"
                               role="presentation"
                               className="MuiInputBase-input MuiOutlinedInput-input"
-                              defaultValue="100.00"
+                              defaultValue="136.00"
                             />
                             <fieldset
                               aria-hidden="true"
@@ -513,7 +513,7 @@ function Step2() {
                             {label: 'Angola', value: 'value3'},
                             {label: 'Anguilla', value: 'value3'},
                           ]}
-                          value="Afghanistan"
+                          value="Hong Kong"
                         />
                       </div>
                     </div>
@@ -530,7 +530,7 @@ function Step2() {
                               type="text"
                               role="presentation"
                               className="MuiInputBase-input MuiOutlinedInput-input"
-                              defaultValue="86.00"
+                              defaultValue="93.00"
                             />
                             <fieldset
                               aria-hidden="true"
@@ -569,6 +569,352 @@ function Step2() {
                   </div>
                 </div>
               </div>
+              <div className="MuiGrid-root MuiGrid-item">
+                <div className="MuiBox-root jss826">
+                  <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2">
+                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                      <div className="MuiBox-root jss828">
+                        <Input
+                          options={[
+                            {label: 'Afghanistan', value: 'value1'},
+                            {label: 'Albania', value: 'value2'},
+                            {label: 'Algeria', value: 'value3'},
+                            {label: 'Angola', value: 'value3'},
+                            {label: 'Anguilla', value: 'value3'},
+                          ]}
+                          value="India"
+                        />
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                      <div className="MuiBox-root jss512">
+                        <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                          <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl">
+                            <input
+                              aria-invalid="false"
+                              autoComplete="off"
+                              id="first_name"
+                              name="base_data.first_name"
+                              placeholder="Amount"
+                              type="text"
+                              role="presentation"
+                              className="MuiInputBase-input MuiOutlinedInput-input"
+                              defaultValue="111.00"
+                            />
+                            <fieldset
+                              aria-hidden="true"
+                              className="jss513 MuiOutlinedInput-notchedOutline"
+                              style={{paddingLeft: 8}}
+                            >
+                              <legend
+                                className="jss514"
+                                style={{width: '0.01px'}}
+                              >
+                                <span>​</span>
+                              </legend>
+                            </fieldset>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root MuiGrid-item">
+                      <button
+                        className="MuiButtonBase-root MuiIconButton-root jss820 MuiIconButton-colorSecondary"
+                        tabIndex={0}
+                        type="button"
+                      >
+                        <span className="MuiIconButton-label">
+                          <svg
+                            className="MuiSvgIcon-root"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                          >
+                            <path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" />
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="MuiGrid-root MuiGrid-item">
+                <div className="MuiBox-root jss826">
+                  <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2">
+                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                      <div className="MuiBox-root jss828">
+                        <Input
+                          options={[
+                            {label: 'Afghanistan', value: 'value1'},
+                            {label: 'Albania', value: 'value2'},
+                            {label: 'Algeria', value: 'value3'},
+                            {label: 'Angola', value: 'value3'},
+                            {label: 'Anguilla', value: 'value3'},
+                          ]}
+                          value="Japan"
+                        />
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                      <div className="MuiBox-root jss512">
+                        <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                          <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl">
+                            <input
+                              aria-invalid="false"
+                              autoComplete="off"
+                              id="first_name"
+                              name="base_data.first_name"
+                              placeholder="Amount"
+                              type="text"
+                              role="presentation"
+                              className="MuiInputBase-input MuiOutlinedInput-input"
+                              defaultValue="169.00"
+                            />
+                            <fieldset
+                              aria-hidden="true"
+                              className="jss513 MuiOutlinedInput-notchedOutline"
+                              style={{paddingLeft: 8}}
+                            >
+                              <legend
+                                className="jss514"
+                                style={{width: '0.01px'}}
+                              >
+                                <span>​</span>
+                              </legend>
+                            </fieldset>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root MuiGrid-item">
+                      <button
+                        className="MuiButtonBase-root MuiIconButton-root jss820 MuiIconButton-colorSecondary"
+                        tabIndex={0}
+                        type="button"
+                      >
+                        <span className="MuiIconButton-label">
+                          <svg
+                            className="MuiSvgIcon-root"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                          >
+                            <path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" />
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="MuiGrid-root MuiGrid-item">
+                <div className="MuiBox-root jss826">
+                  <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2">
+                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                      <div className="MuiBox-root jss828">
+                        <Input
+                          options={[
+                            {label: 'Afghanistan', value: 'value1'},
+                            {label: 'Albania', value: 'value2'},
+                            {label: 'Algeria', value: 'value3'},
+                            {label: 'Angola', value: 'value3'},
+                            {label: 'Anguilla', value: 'value3'},
+                          ]}
+                          value="Malaysia"
+                        />
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                      <div className="MuiBox-root jss512">
+                        <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                          <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl">
+                            <input
+                              aria-invalid="false"
+                              autoComplete="off"
+                              id="first_name"
+                              name="base_data.first_name"
+                              placeholder="Amount"
+                              type="text"
+                              role="presentation"
+                              className="MuiInputBase-input MuiOutlinedInput-input"
+                              defaultValue="71.00"
+                            />
+                            <fieldset
+                              aria-hidden="true"
+                              className="jss513 MuiOutlinedInput-notchedOutline"
+                              style={{paddingLeft: 8}}
+                            >
+                              <legend
+                                className="jss514"
+                                style={{width: '0.01px'}}
+                              >
+                                <span>​</span>
+                              </legend>
+                            </fieldset>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root MuiGrid-item">
+                      <button
+                        className="MuiButtonBase-root MuiIconButton-root jss820 MuiIconButton-colorSecondary"
+                        tabIndex={0}
+                        type="button"
+                      >
+                        <span className="MuiIconButton-label">
+                          <svg
+                            className="MuiSvgIcon-root"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                          >
+                            <path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" />
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="MuiGrid-root MuiGrid-item">
+                <div className="MuiBox-root jss826">
+                  <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2">
+                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                      <div className="MuiBox-root jss828">
+                        <Input
+                          options={[
+                            {label: 'Afghanistan', value: 'value1'},
+                            {label: 'Albania', value: 'value2'},
+                            {label: 'Algeria', value: 'value3'},
+                            {label: 'Angola', value: 'value3'},
+                            {label: 'Anguilla', value: 'value3'},
+                          ]}
+                          value="Thailand"
+                        />
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                      <div className="MuiBox-root jss512">
+                        <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                          <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl">
+                            <input
+                              aria-invalid="false"
+                              autoComplete="off"
+                              id="first_name"
+                              name="base_data.first_name"
+                              placeholder="Amount"
+                              type="text"
+                              role="presentation"
+                              className="MuiInputBase-input MuiOutlinedInput-input"
+                              defaultValue="84.00"
+                            />
+                            <fieldset
+                              aria-hidden="true"
+                              className="jss513 MuiOutlinedInput-notchedOutline"
+                              style={{paddingLeft: 8}}
+                            >
+                              <legend
+                                className="jss514"
+                                style={{width: '0.01px'}}
+                              >
+                                <span>​</span>
+                              </legend>
+                            </fieldset>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root MuiGrid-item">
+                      <button
+                        className="MuiButtonBase-root MuiIconButton-root jss820 MuiIconButton-colorSecondary"
+                        tabIndex={0}
+                        type="button"
+                      >
+                        <span className="MuiIconButton-label">
+                          <svg
+                            className="MuiSvgIcon-root"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                          >
+                            <path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" />
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="MuiGrid-root MuiGrid-item">
+                <div className="MuiBox-root jss826">
+                  <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2">
+                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                      <div className="MuiBox-root jss828">
+                        <Input
+                          options={[
+                            {label: 'Afghanistan', value: 'value1'},
+                            {label: 'Albania', value: 'value2'},
+                            {label: 'Algeria', value: 'value3'},
+                            {label: 'Angola', value: 'value3'},
+                            {label: 'Anguilla', value: 'value3'},
+                          ]}
+                          value="Vietnam"
+                        />
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                      <div className="MuiBox-root jss512">
+                        <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                          <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl">
+                            <input
+                              aria-invalid="false"
+                              autoComplete="off"
+                              id="first_name"
+                              name="base_data.first_name"
+                              placeholder="Amount"
+                              type="text"
+                              role="presentation"
+                              className="MuiInputBase-input MuiOutlinedInput-input"
+                              defaultValue="60.00"
+                            />
+                            <fieldset
+                              aria-hidden="true"
+                              className="jss513 MuiOutlinedInput-notchedOutline"
+                              style={{paddingLeft: 8}}
+                            >
+                              <legend
+                                className="jss514"
+                                style={{width: '0.01px'}}
+                              >
+                                <span>​</span>
+                              </legend>
+                            </fieldset>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="MuiGrid-root MuiGrid-item">
+                      <button
+                        className="MuiButtonBase-root MuiIconButton-root jss820 MuiIconButton-colorSecondary"
+                        tabIndex={0}
+                        type="button"
+                      >
+                        <span className="MuiIconButton-label">
+                          <svg
+                            className="MuiSvgIcon-root"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                          >
+                            <path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" />
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
               <div className="MuiBox-root jss831">
                 <button
                   className="MuiButtonBase-root MuiButton-root jss178 MuiButton-text MuiButton-textPrimary"
