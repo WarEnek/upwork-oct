@@ -14,7 +14,7 @@ function Example() {
       setOpenAlert(true)
       setTimeout(() => {
         setOpenAlert(false)
-      }, 4000)
+      }, 3000)
     }
 
   }, [])
@@ -26,18 +26,6 @@ function Example() {
         <Alert
           severity="success"
           variant="filled"
-          action={
-            <IconButton
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpenAlert(false);
-              }}
-            >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-          }
           sx={{mb: 2, backgroundColor: '#64B092', color: '#fff', fontFamily: 'Lato, sans-serif'}}
         >
           Per diem policy has been saved successfully
@@ -179,7 +167,7 @@ function Example() {
                                 display: 'inline-block',
                               }}
                             >
-                              {'Per diem A -> Singapore per diem policy 2024'}
+                              {'Singapore per diem policy 2024'}
                             </span>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
@@ -231,7 +219,7 @@ function Example() {
                                 display: 'inline-block',
                               }}
                             >
-                              {'Per diem B -> Singapore per diem policy 2023'}
+                              {'Singapore per diem policy 2023'}
                             </span>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
@@ -283,7 +271,7 @@ function Example() {
                                 display: 'inline-block',
                               }}
                             >
-                              {'Per diem C -> Singapore per diem policy 2022'}
+                              {'Singapore per diem policy 2022'}
                             </span>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
@@ -335,7 +323,7 @@ function Example() {
                                 display: 'inline-block',
                               }}
                             >
-                              {'Per diem D -> Malaysia per diem policy 2024'}
+                              {'Malaysia per diem policy 2024'}
                             </span>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
@@ -387,7 +375,7 @@ function Example() {
                                 display: 'inline-block',
                               }}
                             >
-                              {'Per diem A -> Malaysia per diem policy 2023'}
+                              {'Malaysia per diem policy 2023'}
                             </span>
                           </div>
                           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">

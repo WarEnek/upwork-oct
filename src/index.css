@@ -4649,7 +4649,6 @@ activeScrollSpy > .jss495 {
 }
 .jss5556 {
   display: grid;
-  margin-bottom: 8px;
   padding: 12px 0;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -4895,7 +4894,7 @@ activeScrollSpy > .jss495 {
 }
 .jss31483 {
   margin-top: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .jss3109 {
   display: flex;
@@ -5752,4 +5751,18 @@ button.perDay-tags-chip {
 .jssss259 {
     color: #6261B5;
     padding: 0;
+}
+
+.jss630s1 {
+  margin-left: 0;
+}
+
+.jss233s3 {
+  margin-left: 6px;
+}
+
+.jss3270s4 {
+  margin-top: 20px; 
+  margin-bottom: 20px;
+
 }

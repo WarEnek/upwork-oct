@@ -415,7 +415,7 @@ function Step1() {
                           </div>
                           <div className="MuiBox-root jss629 jss506">
                             <div
-                              className="MuiBox-root jss630"
+                              className="MuiBox-root jss630 jss630s1"
                               data-test-id="section-value-undefined"
                             >
                               <div className="MuiBox-root jss632">

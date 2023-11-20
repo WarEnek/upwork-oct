@@ -74,7 +74,7 @@ function Submission() {
 
   const dinnerHandle = () => {
     setDinner(!dinner);
-  }
+  };
 
   return (
     <div className="jss70">
@@ -208,7 +208,7 @@ function Submission() {
                                               color: 'rgb(33, 40, 49)',
                                               transition: '.2s all',
                                               '&:hover': {
-                                                backgroundColor: '#F7F7FB'
+                                                backgroundColor: '#F7F7FB',
                                               },
                                             }}
                                           >
@@ -219,10 +219,10 @@ function Submission() {
                                             sx={{
                                               fontFamily: 'Lato, sans-serif',
                                               fontSize: '15px',
-                                              color: 'rgb(33, 40, 49)', 
+                                              color: 'rgb(33, 40, 49)',
                                               transition: '.2s all',
                                               '&:hover': {
-                                                backgroundColor: '#F7F7FB'
+                                                backgroundColor: '#F7F7FB',
                                               },
                                             }}
                                           >
@@ -290,24 +290,40 @@ function Submission() {
                                                 <Input
                                                   options={[
                                                     {
-                                                      label: 'Afghanistan',
+                                                      label: 'Australia',
                                                       value: 'value1',
                                                     },
                                                     {
-                                                      label: 'Albania',
+                                                      label: 'Cambodia',
                                                       value: 'value2',
                                                     },
                                                     {
-                                                      label: 'Algeria',
+                                                      label: 'Hong Kong',
                                                       value: 'value3',
                                                     },
                                                     {
-                                                      label: 'Angola',
-                                                      value: 'value3',
+                                                      label: 'India',
+                                                      value: 'value4',
                                                     },
                                                     {
-                                                      label: 'Anguilla',
-                                                      value: 'value3',
+                                                      label: 'Japan',
+                                                      value: 'value5',
+                                                    },
+                                                    {
+                                                      label: 'Malaysia',
+                                                      value: 'value6',
+                                                    },
+                                                    {
+                                                      label: 'Singapore',
+                                                      value: 'value7',
+                                                    },
+                                                    {
+                                                      label: 'Thailand',
+                                                      value: 'value8',
+                                                    },
+                                                    {
+                                                      label: 'Vietnam',
+                                                      value: 'value9',
                                                     },
                                                   ]}
                                                   placeholder="Country"
@@ -451,7 +467,7 @@ function Submission() {
                                             }}
                                           >
                                             <div className="MuiBox-root jss279 jss3276">
-                                            Arrival at destination
+                                              Arrival at destination
                                               <span className="jsss509">
                                                 &nbsp;*
                                               </span>
@@ -468,24 +484,40 @@ function Submission() {
                                                 <Input
                                                   options={[
                                                     {
-                                                      label: 'Afghanistan',
+                                                      label: 'Australia',
                                                       value: 'value1',
                                                     },
                                                     {
-                                                      label: 'Albania',
+                                                      label: 'Cambodia',
                                                       value: 'value2',
                                                     },
                                                     {
-                                                      label: 'Algeria',
+                                                      label: 'Hong Kong',
                                                       value: 'value3',
                                                     },
                                                     {
-                                                      label: 'Angola',
-                                                      value: 'value3',
+                                                      label: 'India',
+                                                      value: 'value4',
                                                     },
                                                     {
-                                                      label: 'Anguilla',
-                                                      value: 'value3',
+                                                      label: 'Japan',
+                                                      value: 'value5',
+                                                    },
+                                                    {
+                                                      label: 'Malaysia',
+                                                      value: 'value6',
+                                                    },
+                                                    {
+                                                      label: 'Singapore',
+                                                      value: 'value7',
+                                                    },
+                                                    {
+                                                      label: 'Thailand',
+                                                      value: 'value8',
+                                                    },
+                                                    {
+                                                      label: 'Vietnam',
+                                                      value: 'value9',
                                                     },
                                                   ]}
                                                   placeholder="Country"
@@ -629,7 +661,7 @@ function Submission() {
                                             }}
                                           >
                                             <div className="MuiBox-root jss279 jss3276">
-                                            Return at home country
+                                              Return at home country
                                               <span className="jsss509">
                                                 &nbsp;*
                                               </span>
@@ -646,24 +678,40 @@ function Submission() {
                                                 <Input
                                                   options={[
                                                     {
-                                                      label: 'Afghanistan',
+                                                      label: 'Australia',
                                                       value: 'value1',
                                                     },
                                                     {
-                                                      label: 'Albania',
+                                                      label: 'Cambodia',
                                                       value: 'value2',
                                                     },
                                                     {
-                                                      label: 'Algeria',
+                                                      label: 'Hong Kong',
                                                       value: 'value3',
                                                     },
                                                     {
-                                                      label: 'Angola',
-                                                      value: 'value3',
+                                                      label: 'India',
+                                                      value: 'value4',
                                                     },
                                                     {
-                                                      label: 'Anguilla',
-                                                      value: 'value3',
+                                                      label: 'Japan',
+                                                      value: 'value5',
+                                                    },
+                                                    {
+                                                      label: 'Malaysia',
+                                                      value: 'value6',
+                                                    },
+                                                    {
+                                                      label: 'Singapore',
+                                                      value: 'value7',
+                                                    },
+                                                    {
+                                                      label: 'Thailand',
+                                                      value: 'value8',
+                                                    },
+                                                    {
+                                                      label: 'Vietnam',
+                                                      value: 'value9',
                                                     },
                                                   ]}
                                                   placeholder="Country"
@@ -795,55 +843,54 @@ function Submission() {
                                     </div>
                                   </div>
                                   <div className="MuiBox-root jssss961">
-                                  <div className="MuiBox-root jssss962">
-                                    <button
-                                      className="MuiButtonBase-root MuiButton-root jssss852 MuiButton-text MuiButton-textPrimary"
-                                      tabIndex={0}
-                                      type="button"
-                                      data-test-id="rule-add-button"
-                                    >
-                                      <span className="MuiButton-label">
-                                        <span className="MuiButton-startIcon MuiButton-iconSizeMedium">
-                                          <svg
-                                            width={20}
-                                            height={20}
-                                            viewBox="0 0 20 20"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="MuiSvgIcon-root"
-                                            focusable="false"
-                                            aria-hidden="true"
-                                          >
-                                            <path
-                                              d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
-                                              stroke="#000"
-                                              strokeWidth="1.3"
-                                              strokeLinecap="round"
+                                    <div className="MuiBox-root jssss962">
+                                      <button
+                                        className="MuiButtonBase-root MuiButton-root jssss852 MuiButton-text MuiButton-textPrimary"
+                                        tabIndex={0}
+                                        type="button"
+                                        data-test-id="rule-add-button"
+                                      >
+                                        <span className="MuiButton-label">
+                                          <span className="MuiButton-startIcon MuiButton-iconSizeMedium">
+                                            <svg
+                                              width={20}
+                                              height={20}
+                                              viewBox="0 0 20 20"
                                               fill="none"
-                                              strokeLinejoin="round"
-                                            />
-                                            <path
-                                              d="M7.5 10H12.5"
-                                              stroke="#000"
-                                              strokeWidth="1.3"
-                                              strokeLinecap="round"
-                                              strokeLinejoin="round"
-                                            />
-                                            <path
-                                              d="M10 7.5V12.5"
-                                              stroke="#000"
-                                              strokeWidth="1.3"
-                                              strokeLinecap="round"
-                                              strokeLinejoin="round"
-                                            />
-                                          </svg>
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              className="MuiSvgIcon-root"
+                                              focusable="false"
+                                              aria-hidden="true"
+                                            >
+                                              <path
+                                                d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
+                                                stroke="#000"
+                                                strokeWidth="1.3"
+                                                strokeLinecap="round"
+                                                fill="none"
+                                                strokeLinejoin="round"
+                                              />
+                                              <path
+                                                d="M7.5 10H12.5"
+                                                stroke="#000"
+                                                strokeWidth="1.3"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                              />
+                                              <path
+                                                d="M10 7.5V12.5"
+                                                stroke="#000"
+                                                strokeWidth="1.3"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                              />
+                                            </svg>
+                                          </span>
+                                          Add leg
                                         </span>
-                                        Add rule
-                                      </span>
-                                    </button>
+                                      </button>
+                                    </div>
                                   </div>
-                                </div>
-
                                 </div>
                                 <div className="MuiBox-root jssss147">
                                   <div className="MuiBox-root jss3148">
@@ -874,7 +921,19 @@ function Submission() {
                                           >
                                             <div className="MuiBox-root jss3283">
                                               <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                                <Input placeholder="Project" />
+                                                <Input
+                                                  placeholder="Project"
+                                                  options={[
+                                                    {
+                                                      label: 'Project A',
+                                                      year: 'value1',
+                                                    },
+                                                    {
+                                                      label: 'Project B',
+                                                      year: 'value2',
+                                                    },
+                                                  ]}
+                                                />
                                               </div>
                                             </div>
                                             <div className="MuiBox-root jss288" />
@@ -907,7 +966,16 @@ function Submission() {
                                           >
                                             <div className="MuiBox-root jss3283">
                                               <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                                <Input placeholder="Customer" />
+                                                <Input placeholder="Customer" options={[
+                                                    {
+                                                      label: 'Customer A',
+                                                      year: 'value1',
+                                                    },
+                                                    {
+                                                      label: 'Customer B',
+                                                      year: 'value2',
+                                                    },
+                                                  ]}/>
                                               </div>
                                             </div>
                                             <div className="MuiBox-root jss288" />
@@ -986,6 +1054,7 @@ function Submission() {
                                 prev={handlePopupClickOpen}
                                 submit={handleToSubmit}
                                 sub
+                                submitText
                                 onClose={handlePopupStep2ClickClose}
                                 title={'New per diem'}
                                 maxWidth={800}
@@ -1054,7 +1123,7 @@ function Submission() {
                                             <Checkbox checked={true}>
                                               <div>
                                                 <div className="perDay-item-date">
-                                                Tue, 19/09/2023
+                                                  Tue, 19/09/2023
                                                 </div>
                                                 <div className="perDay-item-depart">
                                                   <b>Malaysia,</b>{' '}
@@ -1089,7 +1158,7 @@ function Submission() {
                                             <Checkbox checked={true}>
                                               <div>
                                                 <div className="perDay-item-date">
-                                                Wed, 20/09/2023
+                                                  Wed, 20/09/2023
                                                 </div>
                                                 <div className="perDay-item-depart">
                                                   <b>Malaysia,</b>{' '}
@@ -1099,7 +1168,7 @@ function Submission() {
                                             </Checkbox>
                                           </div>
                                           <div className="perDay-item-price">
-                                            SGD {dinner ? "86.00" : "60.00"}
+                                            SGD 86.00
                                           </div>
                                         </div>
                                         <div className="perDay-tags">
@@ -1108,9 +1177,11 @@ function Submission() {
                                             <span className="perDay-tags-chip">
                                               LUNCH PROVIDED
                                             </span>
-                                            <button className={dinner ? "perDay-tags-chip" : "perDay-tags-chip active"} onClick={dinnerHandle}>
+                                            <span
+                                              className='perDay-tags-chip'
+                                            >
                                               DINNER PROVIDED
-                                            </button>
+                                            </span>
                                           </div>
                                         </div>
                                       </div>
@@ -1124,17 +1195,17 @@ function Submission() {
                                             <Checkbox checked={true}>
                                               <div>
                                                 <div className="perDay-item-date">
-                                                Thu, 21/09/2023
+                                                  Thu, 21/09/2023
                                                 </div>
                                                 <div className="perDay-item-depart">
-                                                  <b>Malaysia,</b>
+                                                  <b>Malaysia,</b>{' '}
                                                   {'Full daily rate'}
                                                 </div>
                                               </div>
                                             </Checkbox>
                                           </div>
                                           <div className="perDay-item-price">
-                                            SGD 60.00
+                                            SGD {!dinner ? '86.00' : '60.00'}
                                           </div>
                                         </div>
                                         <div className="perDay-tags">
@@ -1143,14 +1214,22 @@ function Submission() {
                                             <span className="perDay-tags-chip">
                                               LUNCH PROVIDED
                                             </span>
-                                            <span className="perDay-tags-chip active">
+                                            <button
+                                              className={
+                                                !dinner
+                                                  ? 'perDay-tags-chip'
+                                                  : 'perDay-tags-chip active'
+                                              }
+                                              onClick={dinnerHandle}
+                                            >
                                               DINNER PROVIDED
-                                            </span>
+                                            </button>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
+
                                 </div>
                               </Popup>
                             </div>

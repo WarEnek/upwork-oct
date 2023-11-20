@@ -235,7 +235,7 @@ function Step4() {
                       DEDUCTION RATE (% of daily rate)
                     </h6>
                   </div>
-                  <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto">
+                  <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2">
                     <div className="MuiBox-root jss825" />
                   </div>
                 </div>
@@ -258,7 +258,7 @@ function Step4() {
                         <div
                           className="MuiBox-root jsss5299"
                           data-test-id="include-index"
-                          style={{gap: 8}}
+                          style={{gap: 8, paddingLeft: 8}}
                         >
                           30%
                         </div>
@@ -306,7 +306,7 @@ function Step4() {
                         <div
                           className="MuiBox-root jsss5299"
                           data-test-id="include-index"
-                          style={{gap: 8}}
+                          style={{gap: 8, paddingLeft: 8}}
                         >
                           40%
                         </div>
@@ -342,7 +342,7 @@ function Step4() {
                 title={'Edit Deduction'}
                 maxWidth={800}
               >
-                <div className="MuiBox-root jss3270">
+                <div className="MuiBox-root jss3270 jss3270s4">
                   <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
                     <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start">
                       <div className="MuiBox-root jss3277">
@@ -399,7 +399,7 @@ function Step4() {
                     </div>
                   </div>
                 </div>
-                <div className="MuiBox-root jss3270">
+                <div className="MuiBox-root jss3270 jss3270s4">
                   <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12">
                     <div className="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-flex-start">
                       <div className="MuiBox-root jss3277">

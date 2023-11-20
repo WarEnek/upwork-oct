@@ -2,9 +2,7 @@ import {useRef, useEffect, useState} from 'react';
 
 import userAva from '../assets/Emily_Tan_IenxnIz.png';
 import Collapse from '@mui/material/Collapse';
-import IconButton from '@mui/material/IconButton';
 import Alert from '@mui/material/Alert';
-import CloseIcon from '@mui/icons-material/Close';
 
 
 import Header from '../Header';
@@ -15,7 +13,7 @@ function SubmissionSubmitted() {
   useEffect(() => {
     setTimeout(() => {
       setOpenAlert(false)
-    }, 4000)
+    }, 3000)
   }, [])
 
   const [open, setOpen] = useState(false);
@@ -42,18 +40,6 @@ function SubmissionSubmitted() {
         <Alert
           severity="success"
           variant="filled"
-          action={
-            <IconButton
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpenAlert(false);
-              }}
-            >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-          }
           sx={{mb: 2, backgroundColor: '#64B092', color: '#fff', fontFamily: 'Lato, sans-serif'}}
         >
           Expense has been submitted successfully

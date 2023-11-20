@@ -1,8 +1,6 @@
 import {useRef, useEffect, useState} from 'react';
 import userAva from '../assets/Emily_Tan_IenxnIz.png';
 import Alert from '@mui/material/Alert';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
 import Collapse from '@mui/material/Collapse';
 
 import Checkbox from '../Checkbox';
@@ -14,6 +12,7 @@ function SubmissionApprove() {
   const [openPopup, setOpenPopup] = useState(false);
   const [openPopupStep2, setOpenPopupStep2] = useState(false);
   const [openAlert, setOpenAlert] = useState(false);
+  const [showRow, setShowRow] = useState(true);
 
   const handlePopupStep2ClickOpen = () => {
     setOpenPopupStep2(true);
@@ -24,9 +23,10 @@ function SubmissionApprove() {
     setOpenPopupStep2(false);
     setOpenPopup(false);
     setOpenAlert(true);
+    setShowRow(false);
     setTimeout(() => {
-      setOpenAlert(false)
-    }, 4000)
+      setOpenAlert(false);
+    }, 3000);
   };
 
   const handlePopupClickOpen = () => {
@@ -60,19 +60,12 @@ function SubmissionApprove() {
         <Alert
           severity="success"
           variant="filled"
-          action={
-            <IconButton
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpenAlert(false);
-              }}
-            >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-          }
-          sx={{mb: 2, backgroundColor: '#64B092', color: '#fff', fontFamily: 'Lato, sans-serif'}}
+          sx={{
+            mb: 2,
+            backgroundColor: '#64B092',
+            color: '#fff',
+            fontFamily: 'Lato, sans-serif',
+          }}
         >
           Expense(s) has been approved successfully
         </Alert>
@@ -212,10 +205,7 @@ function SubmissionApprove() {
                       </div>
                     </div>
                     <div className="MuiBox-root jssss688">
-                      <div
-                        className="MuiPaper-root jssss250 jssss251 MuiPaper-outlined MuiPaper-rounded"
-                        onClick={handlePopupClickOpen}
-                      >
+                      <div className="MuiPaper-root jssss250 jssss251 MuiPaper-outlined MuiPaper-rounded">
                         <div
                           className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
                           data-test-id="Starbucks_Pedro_to approve item"
@@ -302,6 +292,98 @@ function SubmissionApprove() {
                           </div>
                         </div>
                       </div>
+                      {showRow && (
+                        <div
+                          className="MuiPaper-root jssss250 jssss251 MuiPaper-outlined MuiPaper-rounded"
+                          onClick={handlePopupClickOpen}
+                        >
+                          <div
+                            className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+                            data-test-id="Starbucks_Pedro_to approve item"
+                          >
+                            <div className="MuiGrid-root jssss225 MuiGrid-container MuiGrid-spacing-xs-2">
+                              <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                                <div className="MuiBox-root jssss691">
+                                  <span
+                                    className="MuiButtonBase-root MuiIconButton-root jss675 MuiCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                                    aria-disabled="false"
+                                    style={{padding: 0, marginRight: 8}}
+                                  >
+                                    <span className="MuiTouchRipple-root" />
+                                  </span>
+                                  <Checkbox />
+                                  30/10/2023
+                                </div>
+                              </div>
+                              <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                                <span
+                                  className="MuiTypography-root MuiTypography-h4"
+                                  title="Meals & Entertainment"
+                                  style={{cursor: 'pointer'}}
+                                >
+                                  Per Diem
+                                </span>
+                              </div>
+                              <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                                <span className="MuiTypography-root MuiTypography-h4">
+                                  Project A
+                                </span>
+                              </div>
+                              <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                                <span className="MuiBox-root jss692 jss634">
+                                  SGD
+                                </span>
+                                <span className="MuiBox-root jss693 jss630">
+                                  <span className="MuiTypography-root MuiTypography-h4">
+                                    <b>189</b>
+                                  </span>
+                                </span>
+                              </div>
+                              <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                                <div className="MuiBox-root jss720">
+                                  <div className="MuiBox-root jss721 jss696 jss642">
+                                    <span className="MuiBadge-root sub-ava">
+                                      Pedro Santos
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+                                <span className="MuiBox-root jss692 jss634">
+                                  —
+                                </span>
+                              </div>
+                              <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1">
+                                <span className="MuiBox-root  jssss463">
+                                  For Approval
+                                </span>
+                              </div>
+                              <div className="MuiGrid-root jss628 MuiGrid-item MuiGrid-grid-xs-1">
+                                <div className="MuiBox-root jss727">
+                                  <button
+                                    className="MuiButtonBase-root MuiIconButton-root jss726"
+                                    tabIndex={0}
+                                    type="button"
+                                    data-test-id="icon-more"
+                                  >
+                                    <span className="MuiIconButton-label">
+                                      <svg
+                                        className="MuiSvgIcon-root"
+                                        focusable="false"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                      >
+                                        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                      </svg>
+                                    </span>
+                                    <span className="MuiTouchRipple-root" />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                     <Popup
                       open={openPopup}
@@ -434,7 +516,7 @@ function SubmissionApprove() {
                                 >
                                   <div className="MuiBox-root jss3283">
                                     <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
-                                    Singapore, 21 September 2023, 19:30
+                                      Singapore, 21 September 2023, 19:30
                                     </div>
                                   </div>
                                   <div className="MuiBox-root jss288" />
@@ -444,7 +526,10 @@ function SubmissionApprove() {
                           </div>
                         </div>
                       </div>
-                      <hr className="MuiDivider-root" style={{margin: '0 0 20px'}}/>
+                      <hr
+                        className="MuiDivider-root"
+                        style={{margin: '0 0 20px'}}
+                      />
 
                       <div className="MuiBox-root jss147">
                         <div className="MuiBox-root jss3148">
@@ -540,7 +625,7 @@ function SubmissionApprove() {
                                   data-test-id="section-value-undefined"
                                 >
                                   <div className="MuiBox-root jss3283">
-                                    <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                                    <div className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth" style={{color: '#61758F'}}>
                                       Empty
                                     </div>
                                   </div>
@@ -676,11 +761,10 @@ function SubmissionApprove() {
                                 <div>
                                   <div>
                                     <div className="perDay-item-date">
-                                    Wed, 20/09/2023
+                                      Wed, 20/09/2023
                                     </div>
                                     <div className="perDay-item-depart">
-                                      <b>Malaysia,</b>{' '}
-                                      {'Full daily rate'}
+                                      <b>Malaysia,</b> {'Full daily rate'}
                                     </div>
                                   </div>
                                 </div>
@@ -698,11 +782,10 @@ function SubmissionApprove() {
                                 <div>
                                   <div>
                                     <div className="perDay-item-date">
-                                    Thurs, 21/09/2023
+                                      Thurs, 21/09/2023
                                     </div>
                                     <div className="perDay-item-depart">
-                                      <b>Malaysia,</b>{' '}
-                                      {'Full daily rate'}
+                                      <b>Malaysia,</b> {'Full daily rate'}
                                     </div>
                                   </div>
                                 </div>

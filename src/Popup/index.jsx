@@ -14,6 +14,7 @@ export default function Popup({
   sub,
   ap,
   submit,
+  submitText,
   children,
 }) {
   return (
@@ -104,7 +105,7 @@ export default function Popup({
                     data-test-id="next-btn"
                     onClick={submit}
                   >
-                    <span className="MuiButton-label">Update</span>
+                    <span className="MuiButton-label">{submitText ? 'Submit' : 'Update'}</span>
                     <span className="MuiTouchRipple-root" />
                   </button>
                 </div>

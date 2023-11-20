@@ -1,4 +1,5 @@
 import Autocomplete from '@mui/joy/Autocomplete';
+import Box from '@mui/joy/Box';
 
 export default function Input({options, value, placeholder}) {
   return (
@@ -12,6 +13,7 @@ export default function Input({options, value, placeholder}) {
       }
       value={value}
       disableClearable
+      disablePortal
       popupIcon={
         <svg
           width={10}
@@ -30,12 +32,18 @@ export default function Input({options, value, placeholder}) {
           />
         </svg>
       }
+      renderOption={(props, option) => (
+        <Box component="li" sx={{ fontSize: 14, fontFamily: 'Lato, sans-serif', '&:hover': { background: 'rgb(247, 247, 251)' } }} {...props}>
+          {option.label}
+        </Box>
+      )}
       sx={{
         background: '#f7f7fb',
         boxShadow: 'none',
         height: '40px',
         fontSize: 14,
         fontWeight: 400,
+        fontFamily: 'Lato, sans-serif',
       }}
     />
   );
