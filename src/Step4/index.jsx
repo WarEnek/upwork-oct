@@ -496,6 +496,7 @@ function Step4() {
                                 color: '#212831',
                                 '&.MuiFormControlLabel-root span': {
                                   fontSize: '15px',
+                                  fontFamily: 'Lato, sans-serif'
                                 },
                               }}
                             />
@@ -516,6 +517,7 @@ function Step4() {
                                 color: '#212831',
                                 '&.MuiFormControlLabel-root span': {
                                   fontSize: '15px',
+                                  fontFamily: 'Lato, sans-serif'
                                 },
                               }}
                             />
