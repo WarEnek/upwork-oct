@@ -335,7 +335,7 @@ function SubmissionApprove() {
                                 </span>
                                 <span className="MuiBox-root jss693 jss630">
                                   <span className="MuiTypography-root MuiTypography-h4">
-                                    <b>189</b>
+                                    <b>189.00</b>
                                   </span>
                                 </span>
                               </div>
