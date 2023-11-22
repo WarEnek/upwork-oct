@@ -479,6 +479,8 @@ function Step3() {
                         color: '#212831',
                         '&.MuiFormControlLabel-root span': {
                           fontSize: '15px',
+                          fontFamily: 'Lato, sans-serif',
+
                         },
                       }}
                     />
